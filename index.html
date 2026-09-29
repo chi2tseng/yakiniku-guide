@@ -1,33 +1,66 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>【永久保存版】お肉の焼き方講座完全版｜焼肉ホドリ・全12部位烤法＆秒數指南</title>
-  <meta name="description" content="完整解析日本燒肉職人「お肉のプロ集団（焼肉ホドリ）」49分鐘燒肉烤法講座！收錄タン、タン元、タン下、テール、ハツ、ツラミ、リブロース芯、リブマキ、シルクロース、シンシン、サガリ・ハラミ、ホルモン（小腸・ギャラ・ミノ）全12大部位烤法、翻面秒數、三階段實拍圖解與擷取教學短片。" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>焼肉ホドリ｜和牛・ホルモン火入れ完全教本（全12部位・秒数＆基本論理）</title>
+  <meta name="description" content="お肉のプロ集団（焼肉ホドリ）直伝。タン、タン元、タン下、テール、ハツ、ツラミ、リブロース芯、リブマキ、シルクロース、シンシン、サガリ・ハラミ、ホルモンの秒数・返し時・5大火入れ論理と実演映像。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap">
   <style>
     :root {
-      --bg-deep: #0b0908;
-      --bg-surface: #14110f;
-      --bg-card: #1b1613;
-      --bg-elevated: #251e1a;
-      --border-subtle: rgba(255, 215, 170, 0.12);
-      --border-accent: rgba(235, 110, 45, 0.45);
-      --text-primary: #f7f1eb;
-      --text-secondary: #c7b9ab;
-      --text-muted: #8c7d70;
-      --ember-orange: #f26422;
-      --ember-red: #d9381e;
-      --gold-amber: #f5b041;
-      --radius-lg: 16px;
+      /* Semantic Color Tokens — Smoked Binchotan & Okibi Ember */
+      --surface-bg: #11100E;
+      --surface-elevated: #181613;
+      --surface-card: #1F1C18;
+      --surface-panel: #27231E;
+      --surface-interactive: #312B25;
+      --surface-glass: rgba(24, 22, 19, 0.88);
+
+      --text-primary: #F5F0E6;
+      --text-secondary: #C4B9A8;
+      --text-muted: #948979;
+
+      --accent-ember: #E05328;
+      --accent-ember-soft: rgba(224, 83, 40, 0.14);
+      --accent-amber: #E89B3C;
+      --accent-amber-soft: rgba(232, 155, 60, 0.14);
+      --accent-rare: #E5637C;
+      --accent-rare-soft: rgba(229, 99, 124, 0.14);
+      --accent-safe: #4ADE80;
+      --accent-danger: #F87171;
+      --accent-danger-soft: rgba(248, 113, 113, 0.14);
+
+      --border-subtle: rgba(245, 240, 230, 0.09);
+      --border-default: rgba(245, 240, 230, 0.15);
+      --border-strong: rgba(232, 155, 60, 0.38);
+
+      /* Typography */
+      --font-serif: 'Noto Serif JP', serif;
+      --font-sans: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      /* Spacing & Layout (8dp Incremental System) */
+      --container-max: 1320px;
+      --radius-sm: 6px;
       --radius-md: 10px;
-      --shadow-card: 0 14px 36px rgba(0, 0, 0, 0.55);
+      --radius-lg: 14px;
+
+      /* Icon Sizing Tokens */
+      --icon-sm: 18px;
+      --icon-md: 20px;
+      --icon-lg: 24px;
+      --icon-xl: 28px;
+
+      /* Motion Tokens */
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+      --duration-fast: 180ms;
+      --duration-normal: 260ms;
     }
 
-    * {
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -35,1758 +68,2726 @@
 
     html {
       scroll-behavior: smooth;
-      background-color: var(--bg-deep);
+      background-color: var(--surface-bg);
       color: var(--text-primary);
-      font-family: 'Noto Sans TC', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: var(--font-sans);
+      font-size: 16px;
       line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     body {
-      background:
-        radial-gradient(circle at 15% 0%, rgba(217, 56, 30, 0.14), transparent 40%),
-        radial-gradient(circle at 85% 10%, rgba(245, 176, 65, 0.1), transparent 45%),
-        var(--bg-deep);
-      min-height: 100vh;
+      background-color: var(--surface-bg);
+      background-image:
+        radial-gradient(circle at 12% 0%, rgba(224, 83, 40, 0.09) 0%, transparent 42%),
+        radial-gradient(circle at 88% 8%, rgba(232, 155, 60, 0.06) 0%, transparent 45%);
+      min-height: 100dvh;
       overflow-x: hidden;
+      padding-bottom: 112px;
     }
 
-    .hero {
-      position: relative;
-      padding: 4.5rem 1.5rem 3rem;
-      border-bottom: 1px solid var(--border-subtle);
-      background:
-        linear-gradient(180deg, rgba(11, 9, 8, 0.72) 0%, rgba(11, 9, 8, 0.96) 100%),
-        url('assets/images/hero.jpg') center/cover no-repeat;
+    /* Material Symbols Baseline & Token Discipline */
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: var(--icon-md);
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+      user-select: none;
+      flex-shrink: 0;
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .icon-sm { font-size: var(--icon-sm); }
+    .icon-md { font-size: var(--icon-md); }
+    .icon-lg { font-size: var(--icon-lg); }
+    .icon-xl { font-size: var(--icon-xl); }
+    .icon-filled { font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24; }
+
+    /* Accessibility: Skip Link & Focus States */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      z-index: 2000;
+      background: var(--accent-ember);
+      color: #FFFFFF;
+      padding: 12px 20px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      text-decoration: none;
+      transition: top var(--duration-fast) var(--ease-out-expo);
+    }
+    .skip-link:focus-visible {
+      top: 16px;
+      outline: 3px solid var(--accent-amber);
+      outline-offset: 2px;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent-amber);
+      outline-offset: 2px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      text-wrap: balance;
+      letter-spacing: 0.01em;
+    }
+
+    section[id], article[id] {
+      scroll-margin-top: 96px;
+    }
+
+    .tabular-nums {
+      font-family: var(--font-mono);
+      font-variant-numeric: tabular-nums;
     }
 
     .container {
-      max-width: 1280px;
+      max-width: var(--container-max);
       margin: 0 auto;
+      padding: 0 24px;
     }
 
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.35rem 0.9rem;
-      border-radius: 999px;
-      background: rgba(242, 100, 34, 0.18);
-      border: 1px solid var(--border-accent);
-      color: var(--gold-amber);
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      margin-bottom: 1rem;
-    }
-
-    .hero h1 {
-      font-family: 'Noto Sans JP', 'Noto Serif TC', serif;
-      font-size: clamp(2rem, 4.2vw, 3.2rem);
-      font-weight: 900;
-      line-height: 1.25;
-      margin-bottom: 1rem;
-      background: linear-gradient(135deg, #ffffff 0%, #f8d9b4 55%, #f5b041 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero-sub {
-      max-width: 860px;
-      color: var(--text-secondary);
-      font-size: 1.05rem;
-      margin-bottom: 1.75rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.85rem;
-      align-items: center;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.7rem 1.25rem;
-      border-radius: var(--radius-md);
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      border: 1px solid transparent;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--ember-orange), var(--ember-red));
-      color: #fff;
-      box-shadow: 0 6px 20px rgba(242, 100, 34, 0.35);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 26px rgba(242, 100, 34, 0.5);
-    }
-
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.07);
-      color: var(--text-primary);
-      border-color: var(--border-subtle);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.13);
-      border-color: var(--gold-amber);
-    }
-
-    .philosophy-section {
-      padding: 2.5rem 1.5rem 1.5rem;
-    }
-
-    .section-header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .section-title {
-      font-family: 'Noto Serif TC', serif;
-      font-size: 1.65rem;
-      font-weight: 900;
-      color: var(--text-primary);
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    .philosophy-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 1.15rem;
-    }
-
-    .phil-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 1.35rem 1.4rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .phil-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: linear-gradient(180deg, var(--gold-amber), var(--ember-red));
-    }
-
-    .phil-tag {
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--gold-amber);
-      letter-spacing: 0.06em;
-      margin-bottom: 0.35rem;
-      display: block;
-    }
-
-    .phil-card h3 {
-      font-size: 1.12rem;
-      margin-bottom: 0.55rem;
-      color: #fff;
-    }
-
-    .phil-card p {
-      font-size: 0.92rem;
-      color: var(--text-secondary);
-    }
-
-    .phil-card strong {
-      color: var(--gold-amber);
-    }
-
-    .sticky-Controls {
+    /* Sticky Top Navigation & Global Fire Mode Switcher */
+    .top-header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(15, 12, 10, 0.92);
-      backdrop-filter: blur(14px);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-      padding: 0.85rem 1.5rem;
+      background: var(--surface-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-default);
     }
 
-    .controls-inner {
-      max-width: 1280px;
+    .top-header-inner {
+      max-width: var(--container-max);
       margin: 0 auto;
+      padding: 10px 24px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
       align-items: center;
       justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
-    .filter-pills {
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      min-height: 44px;
+    }
+
+    .brand-crest {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      background: var(--accent-ember-soft);
+      border: 1px solid rgba(224, 83, 40, 0.45);
+      color: var(--accent-ember);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .brand-subtitle {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .nav-pills {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 44px;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+      transition: background-color var(--duration-fast) var(--ease-out-expo),
+                  color var(--duration-fast) var(--ease-out-expo),
+                  border-color var(--duration-fast) var(--ease-out-expo);
+    }
+    .nav-pill:hover {
+      color: var(--text-primary);
+      background: var(--surface-panel);
+      border-color: var(--border-subtle);
+    }
+
+    /* Fire Power Mode Segmented Switch */
+    .fire-mode-switch {
+      display: inline-flex;
+      align-items: center;
+      background: var(--surface-bg);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-sm);
+      padding: 3px;
+      gap: 4px;
+    }
+
+    .fire-mode-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 38px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 4px;
+      background: transparent;
+      color: var(--text-secondary);
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      touch-action: manipulation;
+      transition: background-color var(--duration-fast) var(--ease-out-expo),
+                  color var(--duration-fast) var(--ease-out-expo);
+    }
+    .fire-mode-btn[aria-pressed="true"] {
+      background: var(--accent-ember);
+      color: #FFFFFF;
+    }
+    .fire-mode-btn[data-mode="standard"][aria-pressed="true"] {
+      background: var(--accent-amber);
+      color: #11100E;
+    }
+
+    /* Cut Quick-Jump Ribbon */
+    .cut-ribbon-wrap {
+      border-top: 1px solid var(--border-subtle);
+      background: rgba(17, 16, 14, 0.75);
+    }
+    .cut-ribbon {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 6px 24px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow-x: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--surface-interactive) transparent;
+    }
+    .cut-jump-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 38px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: var(--surface-elevated);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background-color var(--duration-fast) var(--ease-out-expo),
+                  color var(--duration-fast) var(--ease-out-expo),
+                  border-color var(--duration-fast) var(--ease-out-expo);
+    }
+    .cut-jump-link:hover {
+      background: var(--surface-interactive);
+      color: var(--text-primary);
+      border-color: var(--border-strong);
+    }
+    .cut-jump-num {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--accent-amber);
+      font-weight: 700;
+    }
+
+    /* Editorial Masthead Hero */
+    .masthead {
+      padding: 48px 0 40px;
+      border-bottom: 1px solid var(--border-default);
+    }
+    .masthead-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .masthead-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      background: var(--accent-ember-soft);
+      border: 1px solid rgba(224, 83, 40, 0.35);
+      border-radius: var(--radius-sm);
+      color: #FF8A65;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .masthead h1 {
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+    .masthead-lead {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 66ch;
+      margin-bottom: 24px;
+    }
+    .masthead-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.45rem;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .btn-primary, .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 12px 20px;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-sans);
+      font-size: 0.94rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      touch-action: manipulation;
+      transition: transform var(--duration-fast) var(--ease-out-expo),
+                  background-color var(--duration-fast) var(--ease-out-expo),
+                  border-color var(--duration-fast) var(--ease-out-expo);
+    }
+    .btn-primary {
+      background: var(--accent-ember);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .btn-primary:hover {
+      background: #F05E32;
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      background: var(--surface-card);
+      color: var(--text-primary);
+      border: 1px solid var(--border-default);
+    }
+    .btn-secondary:hover {
+      background: var(--surface-interactive);
+      border-color: var(--border-strong);
     }
 
-    .pill {
-      background: var(--bg-elevated);
-      color: var(--text-secondary);
+    .masthead-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .metric-box {
+      background: var(--surface-elevated);
       border: 1px solid var(--border-subtle);
-      padding: 0.42rem 0.9rem;
-      border-radius: 999px;
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+    }
+    .metric-val {
+      font-family: var(--font-mono);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--accent-amber);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .metric-lbl {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    .masthead-visual {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-strong);
+      background: var(--surface-card);
+    }
+    .masthead-visual img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+    }
+    .masthead-caption {
+      padding: 16px 18px;
+      background: var(--surface-elevated);
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .masthead-caption p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+    .masthead-caption strong {
+      color: var(--text-primary);
+    }
+
+    /* Section Header Pattern */
+    .section-block {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--border-default);
+    }
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .section-title-group h2 {
+      font-size: clamp(1.55rem, 2.8vw, 2.2rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title-group p {
+      color: var(--text-secondary);
+      font-size: 0.96rem;
+      margin-top: 6px;
+      max-width: 68ch;
+    }
+
+    /* Fundamental Grilling Logic (基本烤肉邏輯) */
+    .decision-console {
+      background: var(--surface-card);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+    .decision-console-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .decision-console-title {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-amber);
+    }
+    .decision-tabs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .decision-tab-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      padding: 12px 14px;
+      min-height: 64px;
+      background: var(--surface-elevated);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      text-align: left;
+      cursor: pointer;
+      touch-action: manipulation;
+      transition: background-color var(--duration-fast) var(--ease-out-expo),
+                  border-color var(--duration-fast) var(--ease-out-expo),
+                  transform var(--duration-fast) var(--ease-out-expo);
+    }
+    .decision-tab-btn:hover {
+      background: var(--surface-interactive);
+      border-color: var(--accent-amber);
+    }
+    .decision-tab-btn[aria-selected="true"] {
+      background: var(--accent-ember-soft);
+      border-color: var(--accent-ember);
+    }
+    .decision-tab-top {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--text-primary);
+    }
+    .decision-tab-sub {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+    }
+    .decision-output {
+      background: var(--surface-bg);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-sm);
+      padding: 18px 20px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+    }
+    .decision-output-main h3 {
+      font-size: 1.12rem;
+      color: var(--accent-amber);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .decision-output-main p {
+      font-size: 0.93rem;
+      color: var(--text-secondary);
+      max-width: 72ch;
+    }
+    .decision-Matching-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* 5 Master Laws Grid */
+    .laws-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 18px;
+      margin-bottom: 32px;
+    }
+    .law-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .law-card-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .law-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      background: var(--accent-amber-soft);
+      border: 1px solid rgba(232, 155, 60, 0.35);
+      color: var(--accent-amber);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .law-card h3 {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+    }
+    .law-card-tag {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--accent-amber);
+      display: block;
+      margin-bottom: 2px;
+    }
+    .law-card p, .law-card li {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+    .law-card ul {
+      padding-left: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .law-card strong {
+      color: var(--text-primary);
+    }
+
+    /* 3 Visual Flip Signals Bar */
+    .signals-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .signal-box {
+      background: var(--surface-elevated);
+      border: 1px solid var(--border-default);
+      border-left: 4px solid var(--accent-ember);
+      border-radius: var(--radius-sm);
+      padding: 18px;
+    }
+    .signal-step {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--accent-amber);
+      margin-bottom: 6px;
+    }
+    .signal-box h4 {
+      font-size: 1rem;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+    .signal-box p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    /* Master Timing Table */
+    .table-wrapper {
+      background: var(--surface-card);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-md);
+      overflow-x: auto;
+    }
+    .timing-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+      min-width: 940px;
+    }
+    .timing-table th {
+      background: var(--surface-elevated);
+      color: var(--text-primary);
+      font-weight: 700;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border-default);
+      white-space: nowrap;
+    }
+    .timing-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: middle;
+      color: var(--text-secondary);
+    }
+    .timing-table tbody tr:hover {
+      background: rgba(255, 255, 255, 0.025);
+    }
+    .timing-table .cut-jp-link {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--text-primary);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .timing-table .cut-jp-link:hover {
+      color: var(--accent-amber);
+    }
+    .timing-table .cut-zh-sub {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+    .col-highlight {
+      background: rgba(224, 83, 40, 0.07);
+      color: var(--text-primary) !important;
+      font-weight: 600;
+    }
+    body[data-fire-mode="standard"] .col-strong {
+      background: transparent;
+      font-weight: 400;
+    }
+    body[data-fire-mode="standard"] .col-standard {
+      background: rgba(232, 155, 60, 0.09);
+      color: var(--text-primary) !important;
+      font-weight: 600;
+    }
+
+    .table-timer-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 38px;
+      padding: 6px 12px;
+      background: var(--surface-interactive);
+      border: 1px solid var(--border-strong);
+      border-radius: 4px;
+      color: var(--accent-amber);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      touch-action: manipulation;
+      white-space: nowrap;
+      transition: background-color var(--duration-fast) var(--ease-out-expo),
+                  color var(--duration-fast) var(--ease-out-expo);
+    }
+    .table-timer-btn:hover {
+      background: var(--accent-ember);
+      color: #FFFFFF;
+      border-color: var(--accent-ember);
+    }
+
+    /* Filter & Search Bar for 12 Cuts */
+    .filter-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      background: var(--surface-card);
+      padding: 14px 18px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-default);
+    }
+    .filter-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .filter-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 44px;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      background: var(--surface-elevated);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      font-family: var(--font-sans);
       font-size: 0.86rem;
       font-weight: 600;
       cursor: pointer;
-      transition: all 0.18s ease;
+      touch-action: manipulation;
+      transition: background-color var(--duration-fast) var(--ease-out-expo),
+                  color var(--duration-fast) var(--ease-out-expo),
+                  border-color var(--duration-fast) var(--ease-out-expo);
+    }
+    .filter-chip:hover {
+      color: var(--text-primary);
+      background: var(--surface-interactive);
+    }
+    .filter-chip[aria-pressed="true"] {
+      background: var(--accent-ember);
+      color: #FFFFFF;
+      border-color: var(--accent-ember);
     }
 
-    .pill:hover {
-      color: #fff;
-      border-color: rgba(245, 176, 65, 0.4);
+    .search-field-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 240px;
+      max-width: 360px;
     }
-
-    .pill.active {
-      background: linear-gradient(135deg, var(--ember-orange), var(--ember-red));
-      color: #fff;
-      border-color: transparent;
-      box-shadow: 0 3px 12px rgba(242, 100, 34, 0.35);
+    .search-field-wrap .material-symbols-outlined {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
     }
-
-    .right-tools {
-      display: flex;
-      align-items: center;
-      gap: 0.65rem;
-      flex-wrap: wrap;
-    }
-
     .search-input {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
+      width: 100%;
+      min-height: 44px;
+      padding: 8px 14px 8px 40px;
+      background: var(--surface-bg);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-sm);
       color: var(--text-primary);
-      padding: 0.45rem 0.9rem;
-      border-radius: 999px;
-      font-size: 0.88rem;
-      width: 230px;
-      outline: none;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+    }
+    .search-input::placeholder {
+      color: var(--text-muted);
     }
 
-    .search-input:focus {
-      border-color: var(--gold-amber);
-    }
-
-    .timer-widget {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      background: rgba(245, 176, 65, 0.12);
-      border: 1px solid rgba(245, 176, 65, 0.35);
-      padding: 0.32rem 0.75rem;
-      border-radius: 999px;
-      font-size: 0.84rem;
-    }
-
-    .timer-display {
-      font-family: 'JetBrains Mono', monospace;
-      font-weight: 700;
-      color: var(--gold-amber);
-      min-width: 42px;
-      text-align: center;
-    }
-
-    .timer-btn {
-      background: var(--bg-elevated);
-      color: var(--text-primary);
-      border: 1px solid var(--border-subtle);
-      border-radius: 6px;
-      padding: 0.15rem 0.45rem;
-      font-size: 0.76rem;
-      cursor: pointer;
-      font-weight: 600;
-    }
-
-    .timer-btn:hover {
-      background: var(--ember-orange);
-      color: #fff;
-    }
-
-    .quick-jump-bar {
-      max-width: 1280px;
-      margin: 1.25rem auto 0;
-      padding: 0 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-    }
-
-    .jump-chip {
-      text-decoration: none;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-secondary);
-      padding: 0.34rem 0.8rem;
-      border-radius: 8px;
-      font-size: 0.84rem;
-      font-weight: 700;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      transition: all 0.15s;
-    }
-
-    .jump-chip:hover {
-      background: rgba(242, 100, 34, 0.16);
-      color: #fff;
-      border-color: var(--border-accent);
-    }
-
-    .jump-num {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--gold-amber);
-      font-weight: 700;
-    }
-
-    .cuts-section {
-      padding: 2rem 1.5rem 4rem;
-    }
-
-    .cuts-list {
+    /* 12 Meat Cut Specification Cards */
+    .cuts-stack {
       display: flex;
       flex-direction: column;
-      gap: 2.5rem;
+      gap: 36px;
     }
 
-    .cut-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
+    .cut-spec-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border-default);
       border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-card);
       overflow: hidden;
-      scroll-margin-top: 86px;
-      transition: border-color 0.25s ease;
     }
 
-    .cut-card:hover {
-      border-color: rgba(245, 176, 65, 0.32);
-    }
-
-    .cut-header {
-      padding: 1.5rem 1.75rem;
-      background: linear-gradient(90deg, rgba(37, 30, 26, 0.95) 0%, rgba(27, 22, 19, 0.95) 100%);
-      border-bottom: 1px solid var(--border-subtle);
+    .cut-spec-header {
+      padding: 22px 28px;
+      background: var(--surface-elevated);
+      border-bottom: 1px solid var(--border-default);
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
       align-items: flex-start;
-      gap: 1rem;
-    }
-
-    .cut-title-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-    }
-
-    .cut-meta-row {
-      display: flex;
+      justify-content: space-between;
+      gap: 16px;
       flex-wrap: wrap;
-      align-items: center;
-      gap: 0.5rem;
+    }
+
+    .cut-title-row {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
     .cut-index {
-      font-family: 'JetBrains Mono', monospace;
-      background: var(--ember-orange);
-      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
       font-weight: 700;
-      font-size: 0.8rem;
-      padding: 0.15rem 0.55rem;
-      border-radius: 6px;
+      color: var(--accent-ember);
+      padding: 4px 10px;
+      background: var(--accent-ember-soft);
+      border: 1px solid rgba(224, 83, 40, 0.35);
+      border-radius: 4px;
     }
 
-    .cut-chapter {
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--gold-amber);
-      background: rgba(245, 176, 65, 0.12);
-      padding: 0.15rem 0.65rem;
-      border-radius: 6px;
-      border: 1px solid rgba(245, 176, 65, 0.28);
-    }
-
-    .cut-timestamp {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-      background: rgba(255, 255, 255, 0.06);
-      padding: 0.15rem 0.6rem;
-      border-radius: 6px;
-    }
-
-    .cut-title {
-      font-family: 'Noto Sans JP', 'Noto Serif TC', sans-serif;
-      font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+    .cut-jp-name {
+      font-family: var(--font-serif);
+      font-size: clamp(1.45rem, 2.5vw, 2rem);
       font-weight: 900;
-      color: #fff;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      gap: 0.7rem;
+      color: var(--text-primary);
     }
 
-    .cut-zh-sub {
-      font-size: 1.02rem;
-      font-family: 'Noto Sans TC', sans-serif;
-      font-weight: 600;
-      color: var(--gold-amber);
+    .cut-zh-name {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      margin-top: 4px;
     }
 
     .cut-badges {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
       align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
     }
 
-    .badge-doneness {
-      padding: 0.4rem 0.85rem;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      font-weight: 700;
+    .spec-badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-    }
-
-    .doneness-well {
-      background: rgba(211, 84, 0, 0.22);
-      border: 1px solid rgba(230, 126, 34, 0.55);
-      color: #ff9f43;
-    }
-
-    .doneness-dual {
-      background: rgba(46, 204, 113, 0.16);
-      border: 1px solid rgba(46, 204, 113, 0.45);
-      color: #58d68d;
-    }
-
-    .cut-rule-banner {
-      background: rgba(242, 100, 34, 0.1);
-      border-bottom: 1px solid var(--border-subtle);
-      padding: 0.85rem 1.75rem;
-      font-size: 0.98rem;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 0.8rem;
       font-weight: 700;
-      color: #ffd8a8;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
+      background: var(--surface-panel);
+      border: 1px solid var(--border-default);
+      color: var(--text-primary);
+    }
+    .spec-badge.badge-ember {
+      background: var(--accent-ember-soft);
+      border-color: rgba(224, 83, 40, 0.4);
+      color: #FF9E80;
+    }
+    .spec-badge.badge-amber {
+      background: var(--accent-amber-soft);
+      border-color: rgba(232, 155, 60, 0.4);
+      color: var(--accent-amber);
+    }
+    .spec-badge.badge-danger {
+      background: var(--accent-danger-soft);
+      border-color: rgba(248, 113, 113, 0.45);
+      color: var(--accent-danger);
     }
 
-    .cut-body {
-      padding: 1.75rem;
+    .cut-spec-body {
       display: grid;
-      grid-template-columns: 1.08fr 1fr;
-      gap: 1.75rem;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      padding: 28px;
     }
 
-    @media (max-width: 980px) {
-      .cut-body {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .media-col {
+    /* Left Column: Video Player + 3-Step Visual Filmstrip */
+    .cut-media-col {
       display: flex;
       flex-direction: column;
-      gap: 1.1rem;
+      gap: 16px;
     }
 
-    .video-mode-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .tab-group {
-      display: flex;
-      gap: 0.4rem;
-    }
-
-    .mode-btn {
-      background: var(--bg-elevated);
-      color: var(--text-secondary);
-      border: 1px solid var(--border-subtle);
-      padding: 0.4rem 0.85rem;
-      border-radius: 8px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-
-    .mode-btn.active {
-      background: var(--gold-amber);
-      color: #14110f;
-      border-color: var(--gold-amber);
-    }
-
-    .video-box {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      background: #000;
+    .video-stage {
+      background: #080706;
+      border: 1px solid var(--border-default);
       border-radius: var(--radius-md);
       overflow: hidden;
-      border: 1px solid var(--border-subtle);
     }
-
-    .video-box video,
-    .video-box iframe {
+    .video-stage video {
       width: 100%;
-      height: 100%;
+      aspect-ratio: 16 / 9;
       display: block;
-      object-fit: cover;
-      border: none;
+      background: #000;
     }
-
-    .clip-cue-bar {
+    .video-stage-bar {
+      padding: 10px 14px;
+      background: var(--surface-elevated);
+      border-top: 1px solid var(--border-subtle);
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
       align-items: center;
-      background: rgba(255, 255, 255, 0.03);
-      padding: 0.55rem 0.75rem;
-      border-radius: 8px;
-      border: 1px solid var(--border-subtle);
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
     }
-
-    .cue-label {
-      font-size: 0.78rem;
-      color: var(--text-muted);
+    .yt-source-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--accent-amber);
+      text-decoration: none;
       font-weight: 600;
-      margin-right: 0.25rem;
+    }
+    .yt-source-link:hover {
+      text-decoration: underline;
     }
 
-    .cue-btn {
-      background: rgba(242, 100, 34, 0.15);
-      color: #ffb88c;
-      border: 1px solid rgba(242, 100, 34, 0.35);
-      padding: 0.22rem 0.6rem;
-      border-radius: 6px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-
-    .cue-btn:hover {
-      background: var(--ember-orange);
-      color: #fff;
-    }
-
-    .steps-photo-grid {
+    .keyframe-strip {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 0.65rem;
+      gap: 10px;
     }
-
-    @media (max-width: 560px) {
-      .steps-photo-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .step-photo-card {
-      background: var(--bg-surface);
+    .keyframe-btn {
+      background: var(--surface-elevated);
       border: 1px solid var(--border-subtle);
-      border-radius: 8px;
+      border-radius: var(--radius-sm);
       overflow: hidden;
-      cursor: zoom-in;
-      transition: transform 0.18s ease, border-color 0.18s ease;
+      padding: 0;
+      text-align: left;
+      cursor: pointer;
+      touch-action: manipulation;
+      color: var(--text-secondary);
+      transition: border-color var(--duration-fast) var(--ease-out-expo),
+                  transform var(--duration-fast) var(--ease-out-expo);
     }
-
-    .step-photo-card:hover {
+    .keyframe-btn:hover {
+      border-color: var(--accent-amber);
       transform: translateY(-2px);
-      border-color: var(--gold-amber);
     }
-
-    .step-photo-card img {
+    .keyframe-btn img {
       width: 100%;
+      height: auto;
       aspect-ratio: 16 / 9;
       object-fit: cover;
       display: block;
     }
-
-    .step-photo-caption {
-      padding: 0.45rem 0.55rem;
-      font-size: 0.78rem;
-      color: var(--text-secondary);
+    .keyframe-caption {
+      padding: 8px 10px;
+      font-size: 0.76rem;
       line-height: 1.35;
+      display: flex;
+      align-items: center;
+      gap: 4px;
     }
 
-    .step-photo-caption strong {
-      color: var(--gold-amber);
-      display: block;
-      font-size: 0.75rem;
-      margin-bottom: 0.1rem;
-    }
-
-    .guide-col {
+    /* Right Column: Exact Seconds, Flip Ratio Bar, Signal, Steps */
+    .cut-details-col {
       display: flex;
       flex-direction: column;
-      gap: 1.1rem;
+      gap: 18px;
     }
 
-    .info-grid {
+    .timing-box {
+      background: var(--surface-elevated);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-md);
+      padding: 18px;
+    }
+
+    .timing-box-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .timing-box-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent-amber);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .timing-modes-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.65rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
     }
 
-    .info-item {
-      background: var(--bg-surface);
+    .timing-mode-card {
+      background: var(--surface-bg);
       border: 1px solid var(--border-subtle);
-      padding: 0.7rem 0.9rem;
-      border-radius: 8px;
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+    }
+    body[data-fire-mode="strong"] .timing-mode-card.mode-strong,
+    body[data-fire-mode="standard"] .timing-mode-card.mode-standard {
+      border-color: var(--accent-ember);
+      background: rgba(224, 83, 40, 0.08);
     }
 
-    .info-label {
-      font-size: 0.74rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
+    .mode-label {
+      font-size: 0.76rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+    .mode-seconds {
+      font-family: var(--font-mono);
+      font-size: 0.92rem;
       font-weight: 700;
-      display: block;
-      margin-bottom: 0.15rem;
+      color: var(--text-primary);
+      line-height: 1.4;
     }
 
-    .info-value {
+    /* Visual Front/Back Proportion Bar */
+    .ratio-bar-wrap {
+      margin-bottom: 14px;
+    }
+    .ratio-bar-labels {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+    .ratio-bar-track {
+      height: 10px;
+      border-radius: 999px;
+      background: var(--surface-panel);
+      overflow: hidden;
+      display: flex;
+      gap: 2px;
+    }
+    .ratio-seg-front {
+      background: var(--accent-ember);
+      height: 100%;
+    }
+    .ratio-seg-back {
+      background: var(--accent-amber);
+      height: 100%;
+    }
+
+    .timer-action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .start-timer-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 44px;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      background: var(--accent-ember);
+      color: #FFFFFF;
+      border: none;
+      font-family: var(--font-sans);
+      font-size: 0.84rem;
+      font-weight: 700;
+      cursor: pointer;
+      touch-action: manipulation;
+      transition: background-color var(--duration-fast) var(--ease-out-expo),
+                  transform var(--duration-fast) var(--ease-out-expo);
+    }
+    .start-timer-btn:hover {
+      background: #F26236;
+      transform: translateY(-1px);
+    }
+    .start-timer-btn.secondary-timer {
+      background: var(--surface-interactive);
+      color: var(--accent-amber);
+      border: 1px solid var(--border-strong);
+    }
+    .start-timer-btn.secondary-timer:hover {
+      background: var(--accent-amber);
+      color: #11100E;
+    }
+
+    /* Flip Cue Callout */
+    .flip-cue-box {
+      background: rgba(232, 155, 60, 0.08);
+      border: 1px solid rgba(232, 155, 60, 0.3);
+      border-left: 4px solid var(--accent-amber);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+    }
+    .flip-cue-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--accent-amber);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+    .flip-cue-text {
       font-size: 0.9rem;
-      font-weight: 700;
       color: var(--text-primary);
     }
 
-    .guide-box {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: 10px;
-      padding: 1.05rem 1.2rem;
-    }
-
-    .guide-box h4 {
-      font-size: 0.96rem;
-      color: var(--gold-amber);
-      margin-bottom: 0.6rem;
-      display: flex;
-      align-items: center;
-      gap: 0.45rem;
-    }
-
-    .step-list {
+    /* Step-by-Step Instructions */
+    .steps-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.55rem;
+      gap: 10px;
     }
-
-    .step-list li {
-      position: relative;
-      padding-left: 1.65rem;
+    .step-item {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 10px;
+      align-items: start;
       font-size: 0.92rem;
       color: var(--text-secondary);
     }
-
-    .step-list li strong {
+    .step-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 4px;
+      background: var(--surface-panel);
+      border: 1px solid var(--border-default);
+      color: var(--accent-amber);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .step-item strong {
       color: var(--text-primary);
     }
 
-    .step-num-badge {
-      position: absolute;
-      left: 0;
-      top: 0.18rem;
-      width: 1.2rem;
-      height: 1.2rem;
-      border-radius: 50%;
-      background: rgba(242, 100, 34, 0.25);
-      border: 1px solid var(--ember-orange);
-      color: #fff;
-      font-size: 0.72rem;
-      font-weight: 700;
+    .pairing-footer {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
       display: flex;
       align-items: center;
-      justify-content: center;
-    }
-
-    .pro-tip-box {
-      background: linear-gradient(135deg, rgba(245, 176, 65, 0.1), rgba(217, 56, 30, 0.08));
-      border: 1px solid rgba(245, 176, 65, 0.3);
-      border-radius: 10px;
-      padding: 0.95rem 1.15rem;
-      font-size: 0.9rem;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 0.84rem;
       color: var(--text-secondary);
     }
-
-    .pro-tip-box strong {
-      color: var(--gold-amber);
+    .pairing-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    .table-section {
-      padding: 1rem 1.5rem 4.5rem;
-    }
-
-    .table-wrapper {
-      overflow-x: auto;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-card);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-      font-size: 0.9rem;
-    }
-
-    th, td {
-      padding: 0.9rem 1rem;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    th {
-      background: var(--bg-elevated);
-      color: var(--gold-amber);
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    tr:hover td {
-      background: rgba(255, 255, 255, 0.025);
-    }
-
-    .lightbox {
+    /* Floating Multi-Stage Grill Timer Dock */
+    .timer-dock {
       position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.88);
-      z-index: 999;
-      display: none;
+      bottom: 20px;
+      right: 20px;
+      z-index: 900;
+      width: min(400px, calc(100vw - 32px));
+      background: var(--surface-elevated);
+      border: 2px solid var(--accent-ember);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.75);
+      transform: translateY(150%);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform var(--duration-normal) var(--ease-out-expo),
+                  opacity var(--duration-normal) var(--ease-out-expo);
+    }
+    .timer-dock.is-active {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .timer-dock-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .timer-dock-label {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--accent-amber);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .timer-close-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 4px;
+      border: 1px solid var(--border-default);
+      background: var(--surface-card);
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 1.5rem;
-      cursor: zoom-out;
     }
-
-    .lightbox.open {
+    .timer-dock-main {
       display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
     }
-
-    .lightbox-content {
-      max-width: 1024px;
-      width: 100%;
-      text-align: center;
-    }
-
-    .lightbox-content img {
-      width: 100%;
-      max-height: 80vh;
-      object-fit: contain;
-      border-radius: 12px;
-      border: 1px solid var(--border-accent);
-    }
-
-    .lightbox-caption {
-      margin-top: 0.75rem;
+    .timer-countdown {
+      font-family: var(--font-mono);
+      font-variant-numeric: tabular-nums;
+      font-size: 2.5rem;
+      font-weight: 700;
       color: var(--text-primary);
-      font-size: 1rem;
-      font-weight: 600;
+      line-height: 1;
+    }
+    .timer-stage-pill {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: var(--accent-ember-soft);
+      color: #FF9E80;
+      border: 1px solid rgba(224, 83, 40, 0.4);
+    }
+    .timer-progress-bar {
+      width: 100%;
+      height: 6px;
+      background: var(--surface-panel);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+    .timer-progress-fill {
+      height: 100%;
+      width: 100%;
+      background: var(--accent-ember);
+      transform-origin: left center;
+      transition: transform 0.25s linear;
+    }
+    .timer-dock-controls {
+      display: flex;
+      gap: 8px;
+    }
+    .timer-ctrl-btn {
+      flex: 1;
+      min-height: 44px;
+      border-radius: 4px;
+      border: 1px solid var(--border-default);
+      background: var(--surface-card);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 0.84rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .timer-ctrl-btn:hover {
+      background: var(--surface-interactive);
+    }
+
+    /* Image Lightbox Modal */
+    .lightbox-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 1500;
+      background: rgba(10, 9, 8, 0.92);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--duration-fast) var(--ease-out-expo);
+    }
+    .lightbox-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .lightbox-dialog {
+      max-width: 960px;
+      width: 100%;
+      background: var(--surface-card);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .lightbox-dialog img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .lightbox-bar {
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: var(--surface-elevated);
     }
 
     footer {
-      border-top: 1px solid var(--border-subtle);
-      padding: 2.5rem 1.5rem;
+      padding: 40px 0;
       text-align: center;
       color: var(--text-muted);
-      font-size: 0.88rem;
+      font-size: 0.86rem;
     }
 
-    footer a {
-      color: var(--gold-amber);
-      text-decoration: none;
+    /* Responsive Breakpoints */
+    @media (max-width: 1024px) {
+      .masthead-grid,
+      .cut-spec-body {
+        grid-template-columns: 1fr;
+      }
+      .signals-strip {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .masthead-metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .laws-grid {
+        grid-template-columns: 1fr;
+      }
+      .timing-modes-grid {
+        grid-template-columns: 1fr;
+      }
+      .decision-output {
+        grid-template-columns: 1fr;
+      }
+      .cut-spec-header,
+      .cut-spec-body {
+        padding: 18px;
+      }
+    }
+
+    /* Reduced Motion Compliance */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
     }
   </style>
 </head>
-<body>
+<body data-fire-mode="strong">
+  <a href="#main-content" class="skip-link">跳至主要內容</a>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="container">
-      <div class="hero-badge">🔥 永久保存版｜お肉のプロ集団（焼肉ホドリ 用賀店）宰さん直伝</div>
-      <h1>お肉の焼き方講座完全版｜全12部位・秒数＆焼き方指南</h1>
-      <p class="hero-sub">
-        完整拆解日本燒肉職人 49 分鐘實戰講座——以<strong>日本燒肉店原名（タン、タン元、タン下、テール、ハツ、ツラミ、リブロース芯、リブマキ、シルクロース、シンシン、サガリ・ハラミ、ホルモン）</strong>為主，整理各部位精準翻面秒數、視覺訊號、擷取實烤短片與三階段圖解。
-      </p>
-      <div class="hero-actions">
-        <a href="#cuts-container" class="btn btn-primary">🥩 查看全 12 部位烤法＆秒數</a>
-        <a href="#summary-table" class="btn btn-secondary">📋 餐桌 3 秒速查總表</a>
-        <a href="https://www.youtube.com/watch?v=oKJlJIg0OsI" target="_blank" rel="noopener" class="btn btn-secondary">▶️ 觀看 YouTube 原片 (49:11)</a>
+  <!-- Sticky Navigation & Global Fire Power Mode Switch -->
+  <header class="top-header">
+    <div class="top-header-inner">
+      <a href="#top" class="brand-link">
+        <span class="brand-crest" aria-hidden="true">
+          <span class="material-symbols-outlined icon-lg icon-filled" aria-hidden="true">local_fire_department</span>
+        </span>
+        <span>
+          <span class="brand-title">焼肉ホドリ・火入れ完全教本</span>
+          <span class="brand-subtitle">お肉のプロ集団 直伝｜全12部位・秒数＆基本論理</span>
+        </span>
+      </a>
+
+      <div class="header-controls">
+        <nav class="nav-pills" aria-label="主要區塊導覽">
+          <a href="#grilling-logic" class="nav-pill">
+            <span class="material-symbols-outlined icon-sm" aria-hidden="true">psychology</span>
+            <span>基本烤肉邏輯</span>
+          </a>
+          <a href="#timing-matrix" class="nav-pill">
+            <span class="material-symbols-outlined icon-sm" aria-hidden="true">table_chart</span>
+            <span>秒數速查表</span>
+          </a>
+          <a href="#cuts-catalog" class="nav-pill">
+            <span class="material-symbols-outlined icon-sm" aria-hidden="true">restaurant_menu</span>
+            <span>12部位實演</span>
+          </a>
+        </nav>
+
+        <div class="fire-mode-switch" role="group" aria-label="切換烤爐火力基準">
+          <button type="button" class="fire-mode-btn" data-mode="strong" aria-pressed="true" onclick="setFireMode('strong')">
+            <span class="material-symbols-outlined icon-sm icon-filled" aria-hidden="true">whatshot</span>
+            <span>強火（プロガス火）</span>
+          </button>
+          <button type="button" class="fire-mode-btn" data-mode="standard" aria-pressed="false" onclick="setFireMode('standard')">
+            <span class="material-symbols-outlined icon-sm" aria-hidden="true">outdoor_grill</span>
+            <span>一般店（炭火・無煙）</span>
+          </button>
+        </div>
       </div>
     </div>
+
+    <nav class="cut-ribbon-wrap" aria-label="12部位快速跳轉">
+      <div class="cut-ribbon">
+        <a href="#cut-01" class="cut-jump-link"><span class="cut-jump-num">01</span><span>タン</span></a>
+        <a href="#cut-02" class="cut-jump-link"><span class="cut-jump-num">02</span><span>タン元（厚切り）</span></a>
+        <a href="#cut-03" class="cut-jump-link"><span class="cut-jump-num">03</span><span>タン下（観音開き）</span></a>
+        <a href="#cut-04" class="cut-jump-link"><span class="cut-jump-num">04</span><span>テール</span></a>
+        <a href="#cut-05" class="cut-jump-link"><span class="cut-jump-num">05</span><span>ハツ</span></a>
+        <a href="#cut-06" class="cut-jump-link"><span class="cut-jump-num">06</span><span>ツラミ</span></a>
+        <a href="#cut-07" class="cut-jump-link"><span class="cut-jump-num">07</span><span>リブロース芯</span></a>
+        <a href="#cut-08" class="cut-jump-link"><span class="cut-jump-num">08</span><span>リブマキ</span></a>
+        <a href="#cut-09" class="cut-jump-link"><span class="cut-jump-num">09</span><span>シルクロース</span></a>
+        <a href="#cut-10" class="cut-jump-link"><span class="cut-jump-num">10</span><span>シンシン</span></a>
+        <a href="#cut-11" class="cut-jump-link"><span class="cut-jump-num">11</span><span>サガリ・ハラミ</span></a>
+        <a href="#cut-12" class="cut-jump-link"><span class="cut-jump-num">12</span><span>ホルモン</span></a>
+      </div>
+    </nav>
   </header>
 
-  <!-- CORE PHILOSOPHY -->
-  <section class="philosophy-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">⚡ 燒肉職人的四大核心鐵則（焼く前の鉄則）</h2>
-      </div>
-      <div class="philosophy-grid">
-        <div class="phil-card">
-          <span class="phil-tag">迷思破除 01</span>
-          <h3>「いいお肉はレアで行こう」は嘘！</h3>
-          <p>
-            許多人以為好肉烤太熟會變硬，職人直言：<strong>「焼いて硬くなるお肉は最初から硬い肉（烤了會變硬的肉，從一開始就是硬的肉）！」</strong>相反地，多數部位（特別是<strong>内臓系、タン、ハラミ、リブマキ</strong>）必須在「業火（劫火）」中徹底烤熟，筋膜與脂肪才會軟化並釋放焦糖香氣。
-          </p>
-        </div>
-        <div class="phil-card">
-          <span class="phil-tag">部位總則 02</span>
-          <h3>内臓肉系 vs 枝肉（正肉）系判別公式</h3>
-          <p>
-            <strong>① 内臓肉系（タン、ハラミ、サガリ、ツラミ、テール、ホルモン）</strong>：除了<strong>レバー（牛肝）與ハツ（牛心）</strong>可選レア外，其餘<strong>一律必烤全熟（しっかり焼き）</strong>，烤到像燒鳥店一樣焦香！<br>
-            <strong>② 枝肉系（リブロース芯、リブマキ、シンシン）</strong>：看<strong>厚度（厚さ）</strong>決定！極薄切（シルクロース）可 10 秒涮烤；只要<strong>厚度達 5～8mm 以上或油脂豐厚（リブマキ／カルビ）</strong>就必須烤熟才咬得斷、不膩口。
-          </p>
-        </div>
-        <div class="phil-card">
-          <span class="phil-tag">火候與牛脂 03</span>
-          <h3>牛脂の役割 ＆ いいお店の「ジュワッ」音</h3>
-          <p>
-            焼肉ホドリ的炭火強度是一般店家的 2 倍，<strong>塗牛脂是為了防止強火瞬間黏網</strong>（一般弱火店家其實不太需要牛脂）。因此本頁同時標註<strong>「🔥 強火實測秒數」與「🏠 一般燒肉店標準火力秒數（約 1.5～2 倍時間）」</strong>。
-          </p>
-        </div>
-        <div class="phil-card">
-          <span class="phil-tag">焦色真相 04</span>
-          <h3>タレが焦げてるだけで、お肉は焦げてない！</h3>
-          <p>
-            烤醃醬肉（タレ肉，如リブマキ／特上カルビ）時，表面出現深褐色焦痕，常讓人驚呼「啊！烤焦了！」——<strong>其實那是醬汁裡的蘋果、洋蔥、紅蘿蔔等水果果肉受熱焦糖化，肉本身完全沒焦！</strong>這層焦香正是配白飯最銷魂的靈魂。
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <main id="main-content">
+    <!-- Hero Masthead -->
+    <section id="top" class="masthead">
+      <div class="container">
+        <div class="masthead-grid">
+          <div>
+            <div class="masthead-kicker">
+              <span class="material-symbols-outlined icon-sm icon-filled" aria-hidden="true">verified</span>
+              <span>永久保存版｜焼肉ホドリ 宰（ツカサ）氏 実演解説</span>
+            </div>
+            <h1>和牛・ホルモン火入れ完全教本</h1>
+            <p class="masthead-lead">
+              去燒肉店不再憑感覺亂翻！完整收錄全片 49 分鐘之<strong>「5 大基本烤肉定律」</strong>、<strong>「3 大翻面視覺訊號」</strong>與 <strong>12 大日文部位精準翻面秒數＋高畫質影片教學</strong>。
+            </p>
+            <div class="masthead-actions">
+              <a href="#grilling-logic" class="btn-primary">
+                <span class="material-symbols-outlined icon-md" aria-hidden="true">psychology</span>
+                <span>先看 3 秒決策樹與 5 大定律</span>
+              </a>
+              <a href="#timing-matrix" class="btn-secondary">
+                <span class="material-symbols-outlined icon-md" aria-hidden="true">timer</span>
+                <span>查看 12 部位秒數速查表</span>
+              </a>
+              <a href="https://www.youtube.com/watch?v=oKJlJIg0OsI" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                <span class="material-symbols-outlined icon-md" aria-hidden="true">smart_display</span>
+                <span>YouTube 原片</span>
+              </a>
+            </div>
 
-  <!-- STICKY CONTROLS & QUICK TIMER -->
-  <div class="sticky-Controls">
-    <div class="controls-inner">
-      <div class="filter-pills" id="category-pills">
-        <button class="pill active" data-filter="all">全部位 (12)</button>
-        <button class="pill" data-filter="tan">👅 タン編 (3)</button>
-        <button class="pill" data-filter="akamotsu">🔥 赤モツ・内臓編 (4)</button>
-        <button class="pill" data-filter="edniku">🥩 枝肉（正肉）編 (4)</button>
-        <button class="pill" data-filter="horumon">⚡ ザ・ホルモン編 (1)</button>
-        <button class="pill" data-filter="well">🎯 しっかり焼き必須 (8)</button>
-        <button class="pill" data-filter="dual">⚖️ レア・よく焼き両派 (4)</button>
-      </div>
-      <div class="right-tools">
-        <div class="timer-widget" title="餐桌實烤倒數計時器">
-          <span>⏱️ 翻面計時:</span>
-          <span class="timer-display" id="timer-display">00:05</span>
-          <button class="timer-btn" onclick="startQuickTimer(5)">5秒</button>
-          <button class="timer-btn" onclick="startQuickTimer(15)">15秒</button>
-          <button class="timer-btn" onclick="startQuickTimer(45)">45秒</button>
-          <button class="timer-btn" onclick="resetQuickTimer()">重置</button>
+            <div class="masthead-metrics">
+              <div class="metric-box">
+                <div class="metric-val tabular-nums">
+                  <span class="material-symbols-outlined icon-md" aria-hidden="true">restaurant</span>
+                  <span>12</span>
+                </div>
+                <div class="metric-lbl">日文部位完整收錄</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-val tabular-nums">
+                  <span class="material-symbols-outlined icon-md" aria-hidden="true">rule</span>
+                  <span>5</span>
+                </div>
+                <div class="metric-lbl">職人底層火入れ定律</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-val tabular-nums">
+                  <span class="material-symbols-outlined icon-md" aria-hidden="true">videocam</span>
+                  <span>12</span>
+                </div>
+                <div class="metric-lbl">獨立剪輯實演影片</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-val tabular-nums">
+                  <span class="material-symbols-outlined icon-md" aria-hidden="true">photo_library</span>
+                  <span>36</span>
+                </div>
+                <div class="metric-lbl">翻面關鍵分解圖</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="masthead-visual">
+            <img src="assets/images/gyushi.jpg" alt="開烤前用牛脂塗抹烤網以激發和牛油煙香氣" width="640" height="360" fetchpriority="high">
+            <div class="masthead-caption">
+              <span class="material-symbols-outlined icon-lg" style="color: var(--accent-amber);" aria-hidden="true">lightbulb</span>
+              <p>
+                <strong>開烤前地基「牛脂を塗る」：</strong>塗牛脂的第一目的不是防沾，而是讓油脂滴落火源升起和牛油煙，讓整張烤網<strong>「香りが立つ（香氣四溢）」</strong>，並看準<strong>「火の真上（火源正上方）」</strong>精準下肉。
+              </p>
+            </div>
+          </div>
         </div>
-        <input type="search" id="search-input" class="search-input" placeholder="🔍 搜尋部位 (如: タン, ハラミ, ツラミ, マキ)..." />
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- QUICK JUMP BAR -->
-  <nav class="quick-jump-bar" id="quick-jump-bar"></nav>
+    <!-- Section 1: Fundamental Grilling Logic (基本烤肉邏輯) -->
+    <section id="grilling-logic" class="section-block">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-title-group">
+            <h2>
+              <span class="material-symbols-outlined icon-xl" style="color: var(--accent-ember);" aria-hidden="true">psychology</span>
+              <span>基本火入れ論理｜拿到任何肉的 3 秒決策樹＆ 5 大黃金定律</span>
+            </h2>
+            <p>為什麼薄切牛舌只翻 1 次，厚切牛舌卻要翻 8 次？為什麼內臟與微厚切赤身烤越熟反而越好咬？掌握這套底層物理邏輯，任何燒肉店都能完美駕馭。</p>
+          </div>
+        </div>
 
-  <!-- MAIN CUTS CONTAINER -->
-  <main class="cuts-section">
-    <div class="container">
-      <div class="cuts-list" id="cuts-container"></div>
-    </div>
+        <!-- Interactive 3-Second Decision Console -->
+        <div class="decision-console" aria-label="部位屬性 3 秒決策導航">
+          <div class="decision-console-header">
+            <div class="decision-console-title">
+              <span class="material-symbols-outlined icon-lg" aria-hidden="true">account_tree</span>
+              <span>3 秒決策樹：點選你眼前的肉類特徵，立即查看對應烤法邏輯</span>
+            </div>
+          </div>
+
+          <div class="decision-tabs" role="tablist" aria-label="肉類特徵分類">
+            <button type="button" class="decision-tab-btn" role="tab" aria-selected="true" data-decision="thin-rosu" onclick="selectDecision('thin-rosu')">
+              <span class="decision-tab-top">
+                <span class="material-symbols-outlined icon-sm" aria-hidden="true">layers</span>
+                <span>① 極薄切・霜降/赤身 (2~3mm)</span>
+              </span>
+              <span class="decision-tab-sub">シルクロース / 薄切シンシン</span>
+            </button>
+            <button type="button" class="decision-tab-btn" role="tab" aria-selected="false" data-decision="mid-seimiku" onclick="selectDecision('mid-seimiku')">
+              <span class="decision-tab-top">
+                <span class="material-symbols-outlined icon-sm" aria-hidden="true">dinner_dining</span>
+                <span>② 中厚切・赤身/カルビ (5~8mm)</span>
+              </span>
+              <span class="decision-tab-sub">厚切シンシン / リブマキ</span>
+            </button>
+            <button type="button" class="decision-tab-btn" role="tab" aria-selected="false" data-decision="steak-wagyu" onclick="selectDecision('steak-wagyu')">
+              <span class="decision-tab-top">
+                <span class="material-symbols-outlined icon-sm" aria-hidden="true">auto_awesome</span>
+                <span>③ ステーキ厚切霜降 (1~1.5cm)</span>
+              </span>
+              <span class="decision-tab-sub">リブロース芯（ステーキカット）</span>
+            </button>
+            <button type="button" class="decision-tab-btn" role="tab" aria-selected="false" data-decision="thick-tan" onclick="selectDecision('thick-tan')">
+              <span class="decision-tab-top">
+                <span class="material-symbols-outlined icon-sm" aria-hidden="true">autorenew</span>
+                <span>④ 極厚切タン (約 2cm)</span>
+              </span>
+              <span class="decision-tab-sub">タン元（厚切り）</span>
+            </button>
+            <button type="button" class="decision-tab-btn" role="tab" aria-selected="false" data-decision="red-horumon" onclick="selectDecision('red-horumon')">
+              <span class="decision-tab-top">
+                <span class="material-symbols-outlined icon-sm" aria-hidden="true">local_fire_department</span>
+                <span>⑤ 內臟肉系・タン/ハラミ/頰</span>
+              </span>
+              <span class="decision-tab-sub">タン / タン下 / テール / ツラミ / ハラミ</span>
+            </button>
+            <button type="button" class="decision-tab-btn" role="tab" aria-selected="false" data-decision="white-horumon" onclick="selectDecision('white-horumon')">
+              <span class="decision-tab-top">
+                <span class="material-symbols-outlined icon-sm" aria-hidden="true">warning</span>
+                <span>⑥ 白物ホルモン（腸・胃）</span>
+              </span>
+              <span class="decision-tab-sub">小腸 / ギャラ / ミノ</span>
+            </button>
+          </div>
+
+          <div id="decision-output" class="decision-output" aria-live="polite">
+            <div class="decision-output-main">
+              <h3>
+                <span class="material-symbols-outlined icon-md" aria-hidden="true">bolt</span>
+                <span id="decision-title">【極薄切 2~3mm】5秒＋5秒秒殺レア，或烤50秒解鎖「ホロホロ」鬆化感！</span>
+              </h3>
+              <p id="decision-desc">
+                刀工已切斷肌纖維，放上強火 5 秒即翻面、背面默數 5 秒起鍋，享受絲綢般滑嫩口感；若為霜降薄切（シルクロース），強烈推薦將一盤 4 片中的 2 片烤足 50 秒全熟，肉質會轉為一抿即散的「ホロホロ」鬆化感，與熱白飯在口中同步化開。
+              </p>
+            </div>
+            <div id="decision-links" class="decision-Matching-links">
+              <a href="#cut-09" class="cut-jump-link"><span class="cut-jump-num">09</span><span>シルクロース</span></a>
+              <a href="#cut-10" class="cut-jump-link"><span class="cut-jump-num">10</span><span>シンシン（薄切）</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 Master Grilling Laws -->
+        <div class="laws-grid">
+          <article class="law-card">
+            <div class="law-card-head">
+              <span class="law-badge" aria-hidden="true">
+                <span class="material-symbols-outlined icon-lg" aria-hidden="true">flip</span>
+              </span>
+              <div>
+                <span class="law-card-tag">LAW 01 / FLIP FREQUENCY INVERSION</span>
+                <h3>【薄切 vs. 厚切】翻面頻率反轉定律</h3>
+              </div>
+            </div>
+            <ul>
+              <li><strong>薄〜中厚切（&lt; 1cm）➔ 絕不亂翻，只翻 1 次（表 8 : 裏 2）：</strong>頻繁翻面會讓表面不斷接觸空氣降溫，無法產生梅納反應焦香，最後肉汁流光卻像水煮。第一面死守烤出金黃焦色與表面冒汗（8成熱度），翻面只補 2 成熱度即起鍋。</li>
+              <li><strong>極厚切（約 2cm タン元）➔ 頻繁翻面（每 10~15 秒）＋立烤六面：</strong>厚肉單面久放會「外焦黑、內冰冷」。必須每 10~15 秒翻面一次，利用翻面微散熱讓熱能溫和滲透中心，並將四個側面立起來烤，做到六面封鎖肉汁。</li>
+            </ul>
+          </article>
+
+          <article class="law-card">
+            <div class="law-card-head">
+              <span class="law-badge" aria-hidden="true">
+                <span class="material-symbols-outlined icon-lg" aria-hidden="true">swap_vert</span>
+              </span>
+              <div>
+                <span class="law-card-tag">LAW 02 / TENDERNESS INVERSION</span>
+                <h3>【正肉 vs. 內臟系】軟硬度反轉定律</h3>
+              </div>
+            </div>
+            <ul>
+              <li><strong>內臟肉系（タン下・テール・ツラミ・ハラミ）＝ 越烤越酥軟：</strong>牛舌、橫膈膜、牛頰在解剖學上皆屬「內臟系」，富含膠原蛋白與筋膜。半生不熟時像橡皮筋咬不斷；必須用強火烤足 1.5~2.5 分鐘讓膠質融化，才會變成<strong>「サクッと柔らかい（酥脆軟嫩）」</strong>！</li>
+              <li><strong>赤身瘦肉（シンシン等）＝ 超過 5mm 烤レア反而咬不斷：</strong>只有 2~3mm 薄切才能烤レア；只要超過 5mm 厚，必須烤足 2 分鐘讓纖維熟化，才不會咬不斷（噛み切れない）。</li>
+            </ul>
+          </article>
+
+          <article class="law-card">
+            <div class="law-card-head">
+              <span class="law-badge" aria-hidden="true">
+                <span class="material-symbols-outlined icon-lg" aria-hidden="true">air</span>
+              </span>
+              <div>
+                <span class="law-card-tag">LAW 03 / WAGYU AROMA &amp; RENDERING</span>
+                <h3>【頂級霜降和牛】脂香喚醒＆逼油定律（表 10 : 裏 7）</h3>
+              </div>
+            </div>
+            <ul>
+              <li><strong>喚醒「油の香り（和牛脂香）」：</strong>生牛油沒有香氣！把 <code>リブロース芯</code> 烤足 105 秒至外層微焦酥脆，和牛特有的甜美脂香才會十倍爆發，且比レア更好咬斷。</li>
+              <li><strong>重油花必逼油（表 10 : 裏 7）：</strong><code>リブマキ（特上カルビ）</code> 烤太生像在喝生油；第一面烤 10 分熟（70秒）、背面 7 分熟（50秒），把多餘牛油逼滴入火，只留焦糖化果香與甘甜。</li>
+              <li><strong>解鎖「ホロホロ」鬆化感：</strong>霜降肉烤熟後油花在纖維間自體油封，呈現一抿即散的鬆化感，與白飯在口中同步化開。</li>
+            </ul>
+          </article>
+
+          <article class="law-card">
+            <div class="law-card-head">
+              <span class="law-badge" aria-hidden="true">
+                <span class="material-symbols-outlined icon-lg" aria-hidden="true">health_and_safety</span>
+              </span>
+              <div>
+                <span class="law-card-tag">LAW 04 / HORUMON SAFETY &amp; SKIN-FIRST</span>
+                <h3>【白內臟（腸・胃）】食安底線＆皮面放置 4 分鐘定律</h3>
+              </div>
+            </div>
+            <ul>
+              <li><strong>食安唯一例外：</strong>全內臟僅新鮮的 <code>ハツ（心）</code> 與 <code>レバー（肝）</code> 可選レア；腸胃類（<code>小腸・ギャラ・ミノ</code>）內部必帶 O157 大腸菌（與鮮度無關），<strong>100% 嚴禁半生熟</strong>！</li>
+              <li><strong>ど真ん中にドカン＋皮面放置 4 分鐘：</strong>整批放進烤網正中央強火區，<strong>先將「皮面（非脂肪面）」朝下徹底放置 3分40秒～4分鐘不翻</strong>（實測 75 秒翻開完全是生的），等皮面焦脆、上方白脂悶透後，再翻面烤脂面 1.5～3 分鐘。</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- 3 Visual Flip Signals -->
+        <div class="signals-strip" aria-label="不看錶也能判斷翻面的 3 大視覺訊號">
+          <div class="signal-box">
+            <div class="signal-step">
+              <span class="material-symbols-outlined icon-sm" aria-hidden="true">visibility</span>
+              <span>SIGNAL 01 / 準備訊號</span>
+            </div>
+            <h4>周りがたわんでくる（邊緣向內微捲拱起）</h4>
+            <p>肉片底部受熱收縮定型，代表第一面正在進行梅納反應。<strong>此時還不要翻面，繼續保持靜置！</strong></p>
+          </div>
+          <div class="signal-box">
+            <div class="signal-step">
+              <span class="material-symbols-outlined icon-sm" aria-hidden="true">water_drop</span>
+              <span>SIGNAL 02 / 黃金翻面瞬間</span>
+            </div>
+            <h4>表面に汗をかく・じわじわ浮く（表面冒汗出汁）</h4>
+            <p>熱量已穿透 70%～80% 厚度，將肉汁與油珠推升至生肉上表面。<strong>此刻立即翻面，鎖住肉汁不滴落！</strong></p>
+          </div>
+          <div class="signal-box">
+            <div class="signal-step">
+              <span class="material-symbols-outlined icon-sm" aria-hidden="true">verified</span>
+              <span>SIGNAL 03 / 翻面後驗證</span>
+            </div>
+            <h4>焼き鳥屋のこんがり焼き目（燒鳥店金黃焦色）</h4>
+            <p>翻過來呈現「ジュワッ」金黃微焦色代表時間完美；フルーツのタレ（水果醬汁）焦糖化呈深琥珀色更是下飯精華。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: All 12 Cuts Timing Matrix Table -->
+    <section id="timing-matrix" class="section-block">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-title-group">
+            <h2>
+              <span class="material-symbols-outlined icon-xl" style="color: var(--accent-amber);" aria-hidden="true">schedule</span>
+              <span>全 12 部位「多久翻面・總秒數」日文主名稱速查表</span>
+            </h2>
+            <p>上方導覽列可切換「強火（ホドリ店內火力）」與「一般店（普通炭火／無煙烤爐）」基準高亮。點擊右側按鈕可立即啟動該部位的雙階段翻面計時器。</p>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="timing-table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">日文部位名稱（中文對照）</th>
+                <th scope="col">翻面策略</th>
+                <th scope="col" class="col-strong col-highlight">強火：多久翻面（表 ➔ 裏）</th>
+                <th scope="col" class="col-standard">一般店：多久翻面（表 ➔ 裏）</th>
+                <th scope="col">返し時（翻面／起鍋視覺訊號）</th>
+                <th scope="col">實戰計時</th>
+              </tr>
+            </thead>
+            <tbody id="timing-table-body">
+              <!-- Populated by JS from unified Japanese-primary dataset -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: 12 Cuts Interactive Master Specifications -->
+    <section id="cuts-catalog" class="section-block">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-title-group">
+            <h2>
+              <span class="material-symbols-outlined icon-xl" style="color: var(--accent-ember);" aria-hidden="true">local_fire_department</span>
+              <span>部位別・火入れ仕様書（全 12 部位影片教學＆分解圖）</span>
+            </h2>
+            <p>每張部位規格書均附有原片擷取之實演教學影片、3 張關鍵翻面視覺分解圖（點擊可放大檢視）與一鍵式多階段讀秒計時器。</p>
+          </div>
+        </div>
+
+        <div class="filter-toolbar">
+          <div class="filter-group" role="group" aria-label="部位分類篩選">
+            <button type="button" class="filter-chip" data-filter="all" aria-pressed="true" onclick="filterCuts('all')">
+              <span class="material-symbols-outlined icon-sm" aria-hidden="true">apps</span>
+              <span>全部部位 (12)</span>
+            </button>
+            <button type="button" class="filter-chip" data-filter="tan" aria-pressed="false" onclick="filterCuts('tan')">
+              <span class="material-symbols-outlined icon-sm" aria-hidden="true">restaurant</span>
+              <span>タン・テール系 (4)</span>
+            </button>
+            <button type="button" class="filter-chip" data-filter="wagyu" aria-pressed="false" onclick="filterCuts('wagyu')">
+              <span class="material-symbols-outlined icon-sm" aria-hidden="true">grade</span>
+              <span>ロース・カルビ・赤身系 (4)</span>
+            </button>
+            <button type="button" class="filter-chip" data-filter="horumon" aria-pressed="false" onclick="filterCuts('horumon')">
+              <span class="material-symbols-outlined icon-sm" aria-hidden="true">whatshot</span>
+              <span>ハラミ・内臓・ホルモン系 (4)</span>
+            </button>
+          </div>
+
+          <div class="search-field-wrap">
+            <span class="material-symbols-outlined icon-md" aria-hidden="true">search</span>
+            <input
+              type="search"
+              id="cut-search-input"
+              class="search-input"
+              name="cut-search"
+              autocomplete="off"
+              placeholder="搜尋日文或中文部位（例：タン、シルクロース、小腸）…"
+              aria-label="搜尋燒肉部位"
+              oninput="handleSearchInput(this.value)"
+            >
+          </div>
+        </div>
+
+        <div id="cuts-stack" class="cuts-stack">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- SUMMARY TABLE -->
-  <section class="table-section" id="summary-table">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">📋 全 12 部位「焼き時間・秒数・返し時」速查總表</h2>
+  <!-- Floating Multi-Stage Grill Timer Dock -->
+  <aside id="timer-dock" class="timer-dock" aria-live="polite" aria-label="燒肉翻面倒數計時器">
+    <div class="timer-dock-top">
+      <div class="timer-dock-label">
+        <span class="material-symbols-outlined icon-md icon-filled" aria-hidden="true">timer</span>
+        <span id="timer-cut-label">タン（強火）</span>
       </div>
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>部位名（日文原名／中文對照）</th>
-              <th>焼き加減（推薦熟度）</th>
-              <th>⏱️ 翻面秒數＆總時間（🔥強火 vs 🏠一般店）</th>
-              <th>翻面次數＆正反比例</th>
-              <th>返し時（黃金翻面訊號）</th>
-              <th>おすすめの食べ方（沾醬）</th>
-            </tr>
-          </thead>
-          <tbody id="summary-tbody"></tbody>
-        </table>
-      </div>
+      <button type="button" class="timer-close-btn" aria-label="關閉計時器" onclick="stopGrillTimer()">
+        <span class="material-symbols-outlined icon-sm" aria-hidden="true">close</span>
+      </button>
     </div>
-  </section>
+    <div class="timer-dock-main">
+      <div id="timer-countdown" class="timer-countdown tabular-nums">00:48</div>
+      <div id="timer-stage-pill" class="timer-stage-pill">STAGE 1/2：表面（表）</div>
+    </div>
+    <div class="timer-progress-bar">
+      <div id="timer-progress-fill" class="timer-progress-fill"></div>
+    </div>
+    <div class="timer-dock-controls">
+      <button type="button" class="timer-ctrl-btn" id="timer-pause-btn" onclick="togglePauseTimer()">
+        <span class="material-symbols-outlined icon-sm" id="timer-pause-icon" aria-hidden="true">pause</span>
+        <span id="timer-pause-text">暫停</span>
+      </button>
+      <button type="button" class="timer-ctrl-btn" onclick="nextTimerStage()">
+        <span class="material-symbols-outlined icon-sm" aria-hidden="true">skip_next</span>
+        <span>下一階段（翻面）</span>
+      </button>
+      <button type="button" class="timer-ctrl-btn" onclick="restartGrillTimer()">
+        <span class="material-symbols-outlined icon-sm" aria-hidden="true">replay</span>
+        <span>重設</span>
+      </button>
+    </div>
+  </aside>
 
-  <!-- LIGHTBOX MODAL -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <div class="lightbox-content">
-      <img id="lightbox-img" src="" alt="放大檢視" />
-      <div class="lightbox-caption" id="lightbox-caption"></div>
+  <!-- Lightbox Modal for Keyframe Photos -->
+  <div id="lightbox" class="lightbox-backdrop" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption" onclick="closeLightbox(event)">
+    <div class="lightbox-dialog" onclick="event.stopPropagation()">
+      <img id="lightbox-img" src="assets/images/01_tan_1.jpg" alt="" width="1280" height="720">
+      <div class="lightbox-bar">
+        <span id="lightbox-caption" style="font-size: 0.92rem; color: var(--text-primary); font-weight: 600;"></span>
+        <button type="button" class="table-timer-btn" onclick="closeLightbox()">
+          <span class="material-symbols-outlined icon-sm" aria-hidden="true">close</span>
+          <span>關閉預覽 (Esc)</span>
+        </button>
+      </div>
     </div>
   </div>
 
   <footer>
     <div class="container">
       <p>
-        資料與畫面來源：<a href="https://www.youtube.com/watch?v=oKJlJIg0OsI" target="_blank" rel="noopener">お肉のプロ集団【永久保存版‼】お肉の焼き方講座完全版!!</a>（焼肉ホドリ 用賀店 / 桜新町 もつ山）<br>
-        整理製作：燒肉全部位烤法互動教學指南 · 日文部位原名為主 · 支援擷取短片直接播放與秒數倒數
+        映像・技術出典：<a href="https://www.youtube.com/watch?v=oKJlJIg0OsI" target="_blank" rel="noopener noreferrer" style="color: var(--accent-amber);">【永久保存版】お肉の焼き方講座完全版（お肉のプロ集団／焼肉ホドリ）</a>
+      </p>
+      <p style="margin-top: 6px;">
+        Designed with UI/UX Pro Max, Frontend Design &amp; Vercel Web Interface Guidelines — All Icons Powered by Google Material Symbols
       </p>
     </div>
   </footer>
 
   <script>
-    const YOUTUBE_ID = "oKJlJIg0OsI";
+    // 3-Second Decision Matrix Data
+    const DECISION_DATA = {
+      'thin-rosu': {
+        title: '【極薄切 2~3mm】5秒＋5秒秒殺レア，或烤50秒解鎖「ホロホロ」鬆化感！',
+        desc: '刀工已切斷肌纖維，放上強火 5 秒即翻面、背面默數 5 秒起鍋，享受絲綢般滑嫩口感；若為霜降薄切（シルクロース），強烈推薦將一盤 4 片中的 2 片烤足 50 秒全熟，肉質會轉為一抿即散的「ホロホロ」鬆化感，與熱白飯在口中同步化開。',
+        links: [
+          { num: '09', name: 'シルクロース', href: '#cut-09' },
+          { num: '10', name: 'シンシン（薄切）', href: '#cut-10' }
+        ]
+      },
+      'mid-seimiku': {
+        title: '【中厚切 5~8mm 赤身／特上カルビ】必烤熟（約 2 分鐘）！赤身烤生會咬不斷、重油花必逼油！',
+        desc: '破除「好牛肉一定要吃レア」的迷思！5mm 以上的赤身（シンシン）若烤レア，肌纖維太韌會完全咬不斷；而重油花的 リブマキ（特上カルビ）必須按「表10分熟(70秒) : 裏7分熟(50秒)」烤熟逼出多餘油脂，才不會滿嘴生油膩感。',
+        links: [
+          { num: '08', name: 'リブマキ（特上カルビ）', href: '#cut-08' },
+          { num: '10', name: 'シンシン（厚切）', href: '#cut-10' }
+        ]
+      },
+      'steak-wagyu': {
+        title: '【1~1.5cm 厚切リブロース芯】雙流派：20秒超レア刺身感 vs 105秒全熟喚醒和牛脂香！',
+        desc: '流派 A（表10秒＋裏10秒）配わさび醤油如炙燒生魚片；但職人宰さん更推流派 B（表50秒＋裏45秒＋剪開斷面15秒），把外層烤到焦脆，徹底喚醒「和牛油の香り」與鬆化咬斷感！',
+        links: [
+          { num: '07', name: 'リブロース芯（ステーキカット）', href: '#cut-07' }
+        ]
+      },
+      'thick-tan': {
+        title: '【約 2cm 極厚切タン元】顛覆薄切邏輯！每 10~15 秒頻繁翻面＋立烤四個側面（六面封汁）',
+        desc: '2cm 厚肉若單面久放，外皮焦黑時中心還是冰的。必須「こまめに何回もひっくり返す（頻繁翻面 6~8 次）」，並用夾子把四個側面立起來烤，最後剪開烤斷面 20 秒，做到六面金黃酥脆、夾起時肉汁滴落！',
+        links: [
+          { num: '02', name: 'タン元（厚切り）', href: '#cut-02' }
+        ]
+      },
+      'red-horumon': {
+        title: '【內臟肉系：タン・タン下・テール・ツラミ・ハラミ】單面重烤只翻 1 次，越烤越酥軟！',
+        desc: '牛舌、橫膈膜、牛頰在燒肉分類皆屬「內臟肉系」，富含膠原蛋白與筋膜。切忌偷翻！第一面死守 50~90 秒烤出如「焼き鳥屋（燒鳥店）」的金黃焦香與表面冒汗，翻面再烤 20~60 秒，筋膜軟化後反而呈現「サクッと柔らかい」酥軟口感。',
+        links: [
+          { num: '01', name: 'タン', href: '#cut-01' },
+          { num: '03', name: 'タン下', href: '#cut-03' },
+          { num: '04', name: 'テール', href: '#cut-04' },
+          { num: '06', name: 'ツラミ', href: '#cut-06' },
+          { num: '11', name: 'サガリ・ハラミ', href: '#cut-11' }
+        ]
+      },
+      'white-horumon': {
+        title: '【白物ホルモン：小腸・ギャラ・ミノ】嚴禁生食！放烤網正中央「皮面朝下放置 4 分鐘」再翻面！',
+        desc: '腸胃類內部帶有 O157 大腸菌（與鮮度無關），100% 嚴禁半生熟！整批放進烤網正中央強火區，先將「皮面（非脂肪面）」朝下放置 3分40秒～4分鐘完全不動，等外緣焦脆、白脂悶透後，再翻面烤脂面 1.5～3 分鐘。',
+        links: [
+          { num: '05', name: 'ハツ（唯一可レア例外）', href: '#cut-05' },
+          { num: '12', name: 'ホルモン（小腸・ギャラ・ミノ）', href: '#cut-12' }
+        ]
+      }
+    };
 
+    // Complete 12 Cuts Data (Japanese Primary Names, Zero Emojis)
     const CUTS_DATA = [
       {
-        id: "01_tan",
-        num: "01",
-        category: "tan",
-        chapterName: "第一章：タン編",
-        shortJp: "タン",
-        nameJp: "タン（黒タン・USタン 薄〜中厚切り）",
-        nameZh: "標準切片牛舌",
-        aliases: "牛舌、塩タン、黒タン、和牛タン、USタン",
-        timeRange: "03:02 - 05:42",
-        ytStart: 225,
-        ytEnd: 315,
-        donenessType: "well",
-        donenessLabel: "🔥 片面しっかり焼き（單面攻透）",
-        timingStrong: "表 45~50秒 返し ➔ 裏 20~25秒（計 約70秒）",
-        timingNormal: "表 60~90秒 返し ➔ 裏 25~40秒（計 約1.5~2分）",
-        timerPresets: [
-          { label: "⏱️ 強火・表 45秒", sec: 45 },
-          { label: "⏱️ 一般店・表 75秒", sec: 75 },
-          { label: "⏱️ 裏面 25秒", sec: 25 }
+        num: '01',
+        id: 'cut-01',
+        category: 'tan',
+        jpName: 'タン（黒タン・USタン 薄〜中厚切り）',
+        zhName: '標準切片牛舌（黑毛和牛舌・美國牛舌）',
+        videoTime: '03:02 - 05:42',
+        ytSec: 182,
+        clip: 'assets/clips/01_tan.mp4',
+        strategyBadge: '只翻 1 次（表 8 : 裏 2）',
+        badgeType: 'badge-ember',
+        strongTiming: '表 45~50秒 返し ➔ 裏 20~25秒（計 約70秒）',
+        standardTiming: '表 60~90秒 返し ➔ 裏 25~40秒（計 約1.5~2分）',
+        ratioFrontLabel: '表（第一面）80%',
+        ratioBackLabel: '裏（第二面）20%',
+        ratioFrontPct: 80,
+        ratioBackPct: 20,
+        flipCue: '周りがちょっとたわんでくる（邊緣向內微捲拱起）＋表面に汗をかいてきたら（表面冒出肉汁油珠流汗），翻面呈「ジュワッ」金黃微焦。',
+        timers: [
+          { label: '強火：表48s ➔ 裏22s', stages: [{ name: '表面（表）', sec: 48 }, { name: '裏面（裏）', sec: 22 }] },
+          { label: '一般店：表75s ➔ 裏30s', stages: [{ name: '表面（表）', sec: 75 }, { name: '裏面（裏）', sec: 30 }] }
         ],
-        flipStrategy: "只翻 1 次（あんまりひっくり返さない）・表裏 8 : 2",
-        flipSignal: "邊緣向內微捲拱起（たわんでくる）＋表面冒汗珠（汗をかいてきたら）",
-        sauce: "ニンニク醤油（蒜味醬油）、青唐辛子味噌（比檸檬更搭！）",
-        goldenRule: "「タン切忌一直翻面！第一面耐心等 45~75 秒直到肉片微拱流汗，翻過來瞬間發出『ジュワッ』且呈現金黃微焦，背面再烤 20 多秒即完成。」",
-        clipFile: "assets/clips/01_tan.mp4",
-        clipCues: [
-          { label: "下網不翻動", sec: 4 },
-          { label: "たわむ・汗をかく(45s)", sec: 45 },
-          { label: "翻面ジュワッ焦色", sec: 62 },
-          { label: "裏面微烤起鍋", sec: 76 }
+        keyframes: [
+          { src: 'assets/images/01_tan_1.jpg', caption: 'Step 1：對準火源正上方平鋪' },
+          { src: 'assets/images/01_tan_2.jpg', caption: 'Step 2：邊緣微捲＋表面冒汗時翻面' },
+          { src: 'assets/images/01_tan_3.jpg', caption: 'Step 3：ジュワッ金黃焦香起鍋' }
         ],
-        stepsPhotos: [
-          { img: "assets/images/01_tan_1.jpg", title: "Step 1｜強火下網・放置 45~75秒", desc: "若火力強先塗牛脂防沾；下網後千萬別急著翻動。" },
-          { img: "assets/images/01_tan_2.jpg", title: "Step 2｜たわむ＋汗をかく＝翻面訊號", desc: "約 45~50秒（一般店 60~90秒）邊緣內拱、表面滲出晶瑩肉汁。" },
-          { img: "assets/images/01_tan_3.jpg", title: "Step 3｜翻面ジュワッ・裏面 20~25秒", desc: "翻面呈現漂亮金黃微焦；背面只需再烤 20~25 秒即可起鍋。" }
+        steps: [
+          '<strong>精準下網不亂動：</strong>將 <code>タン</code> 平鋪於火源正上方，第一面烤足 <strong>45～50 秒（一般店 60～90 秒）</strong>，途中絕不偷翻。',
+          '<strong>觀察「微捲＋冒汗」翻面訊號：</strong>當牛舌外緣向內微捲拱起（たわんでくる）、且上表面滲出晶瑩肉汁水珠（汗をかく）時，立即翻面。',
+          '<strong>表 8 : 裏 2 收尾：</strong>翻面後確認表面有金黃微焦烤痕，背面僅需再烤 <strong>20～25 秒</strong> 即可起鍋，兼具脆彈與爆汁。'
         ],
-        stepsText: [
-          "<strong>牛脂防沾</strong>：若在炭火極強的店家，下網前先用牛脂塗抹烤網防止タン瞬間黏網；一般火力偏弱的店家則不需特別塗牛脂。",
-          "<strong>第一面絕不亂翻（強火 45~50秒／一般店 60~90秒）</strong>：將タン平鋪於烤網後「只翻一次面（あんまりひっくり返さないのがコツ）」。",
-          "<strong>觀察翻面訊號</strong>：不論是黒タン（黑毛和牛）或 USタン（美牛），受熱約 45~75 秒後都會逐漸<strong>向內微捲拱起（たわんでくる）</strong>，且表面開始<strong>冒出肉汁（ちょっと汗かいてきたら）</strong>。",
-          "<strong>翻面與裏面收尾（強火 20~25秒／一般店 25~40秒）</strong>：此時翻面，第一面必須呈現「ジュワッ」的金黃微焦色澤（基本原則）。第二面只需烤約 20~25 秒即可起鍋（想吃更サクッと爽脆可烤至 30 秒）。"
-        ],
-        proTip: "許多人習慣タン配檸檬汁，但宰さん強烈推薦搭配<strong>「ニンニク醤油（蒜味醬油）」或「青唐辛子味噌」</strong>，更能襯托タン烤透後釋放的濃郁甘甜！"
+        seasoning: 'レモン汁、ニンニク醤油（蒜味醬油）、青唐辛子味噌',
+        drink: '生ビール、ハイボール'
       },
       {
-        id: "02_tanmoto",
-        num: "02",
-        category: "tan",
-        chapterName: "第一章：タン編",
-        shortJp: "タン元（厚切り）",
-        nameJp: "タン元（厚切り・約2cm）",
-        nameZh: "厚切牛舌根",
-        aliases: "厚切牛舌、特上牛舌、タン元、厚切りタン",
-        timeRange: "05:43 - 10:11",
-        ytStart: 345,
-        ytEnd: 475,
-        donenessType: "well",
-        donenessLabel: "🔥 こまめ返し・脂が滴るまで焼く",
-        timingStrong: "每 10~15秒 翻面一次（共翻6~8次＋立烤四側）➔ 計 約2分（120秒）",
-        timingNormal: "每 15~20秒 翻面一次 ➔ 計 約3.5~5分（USタン休ませ焼き 約8~10分）",
-        timerPresets: [
-          { label: "⏱️ 厚切り翻面節奏 15秒", sec: 15 },
-          { label: "⏱️ 強火總時間 120秒", sec: 120 }
+        num: '02',
+        id: 'cut-02',
+        category: 'tan',
+        jpName: 'タン元（厚切り・約2cm）',
+        zhName: '厚切牛舌根（舌根最柔嫩霜降核心）',
+        videoTime: '05:43 - 10:11',
+        ytSec: 343,
+        clip: 'assets/clips/02_tanmoto.mp4',
+        strategyBadge: '每 10~15秒 頻繁翻面＋立烤六面',
+        badgeType: 'badge-amber',
+        strongTiming: '每 10~15秒 翻面（6~8次）＋四側面各 10~15秒 ➔ 剪開烤 20秒（計 約120秒）',
+        standardTiming: '每 15~20秒 翻面＋立烤側面（計 約3.5~5分；USタン休ませ焼き 8~10分）',
+        ratioFrontLabel: '六面反覆翻烤 85%（約100秒）',
+        ratioBackLabel: '剪開斷面 15%（20秒）',
+        ratioFrontPct: 85,
+        ratioBackPct: 15,
+        flipCue: 'こまめに何回もひっくり返す（每10~15秒翻面）＋立てて焼く（立烤四側面），烤至夾起時「油がしたたる（肉汁與油脂不斷滴落）」。',
+        timers: [
+          { label: '強火：15秒翻面循環 (120s)', stages: [{ name: '第1~2面翻烤', sec: 30 }, { name: '第3~4面翻烤', sec: 30 }, { name: '立烤四個側面', sec: 40 }, { name: '剪開烤斷面', sec: 20 }] },
+          { label: '斷面收尾計時 (20s)', stages: [{ name: '剪開後斷面炙烤', sec: 20 }] }
         ],
-        flipStrategy: "頻繁多次翻面（每10~15秒翻）＋立起烤側面（六面受熱）",
-        flipSignal: "每隔 10~15 秒就翻動一次，最後烤到夾起時油脂滴落（油がしたたる）",
-        sauce: "ニンニク醤油（蒜味醬油）、青唐辛子味噌、或檸檬汁",
-        goldenRule: "「分厚いタン元跟薄切完全相反！不能單面久放，必須每 10~15 秒こまめにひっくり返す（頻繁翻面）並立起來烤側邊，像每次推進 10% 熱度一樣慢慢養成，直到外層酥脆、油がしたたる（油脂滴落）！」",
-        clipFile: "assets/clips/02_tanmoto.mp4",
-        clipCues: [
-          { label: "厚切下網(每12s翻)", sec: 3 },
-          { label: "立てて側面を焼く", sec: 30 },
-          { label: "ハサミで切って断面焼き", sec: 68 },
-          { label: "油がしたたる完成(120s)", sec: 82 }
+        keyframes: [
+          { src: 'assets/images/02_tanmoto_1.jpg', caption: 'Step 1：2cm 厚切每 10~15 秒頻繁翻面' },
+          { src: 'assets/images/02_tanmoto_2.jpg', caption: 'Step 2：夾子立起厚切牛舌烤四個側面' },
+          { src: 'assets/images/02_tanmoto_3.jpg', caption: 'Step 3：剪開確認粉嫩斷面並補烤 20 秒' }
         ],
-        stepsPhotos: [
-          { img: "assets/images/02_tanmoto_1.jpg", title: "Step 1｜每 10~15 秒こまめに返す", desc: "厚度極厚不易熟，不可單面死烤，每隔 10~15 秒就翻面逐步升溫。" },
-          { img: "assets/images/02_tanmoto_2.jpg", title: "Step 2｜立てて焼く・每側 10~15秒", desc: "將厚切タン元立起來烤四個側邊，讓熱度從六面均勻滲透中心。" },
-          { img: "assets/images/02_tanmoto_3.jpg", title: "Step 3｜計 2~4 分鐘至油がしたたる", desc: "剪開後斷面再烤 15~20秒，烤到夾起時油花不斷滴落才是正解！" }
+        steps: [
+          '<strong>顛覆薄切邏輯・頻繁翻面：</strong>2cm 厚切若單面久放，外層焦黑時中心仍是冰的。必須每 <strong>10～15 秒</strong> 就翻面一次（來回 6～8 次），讓熱能溫和滲透中心。',
+          '<strong>立てて焼く（立烤四個側面）：</strong>用夾子將厚切 <code>タン元</code> 立起來，四個側面也各貼網烤 <strong>10～15 秒</strong>，做到六面全方位封鎖肉汁。',
+          '<strong>剪開斷面收尾：</strong>當夾起牛舌看見油脂不斷滴落（油がしたたる），用剪刀剪開，將微生斷面朝下再烤 <strong>20 秒</strong> 至外酥脆、內粉嫩。'
         ],
-        stepsText: [
-          "<strong>每 10~15 秒頻繁翻面（こまめに何回もひっくり返す）</strong>：厚切タン元中心很難熟，影片實測下網後於第 15秒、27秒、37秒連續翻面——<strong>每隔 10~15 秒（一般店 15~20 秒）就要翻面一次</strong>，每次把熱度往中心推進 1 成（1割ずつ火を入れていくイメージ）。",
-          "<strong>立起來烤四個側面（每側約 10~15 秒）</strong>：用烤肉夾將厚切タン元立起來（立てて焼く），把上下左右四個側面都烤上色。",
-          "<strong>剪開確認與休息法</strong>：強火烤約 95 秒後用剪刀（ハサミ）剪開，斷面再下網烤 <strong>20~25 秒</strong>（總計約 2 分鐘）；若是 USタン，可先夾回盤中休息讓餘溫滲透（お皿に戻して休ませる）再回烤，花 8~10 分鐘慢烤也沒問題。",
-          "<strong>起鍋黃金指標</strong>：烤到夾起來時<strong>表面油脂與肉汁不斷滴落（油がしたたる状態）</strong>，外酥內嫩、香氣完全爆發！"
-        ],
-        proTip: "「大家對タン跟ハラミ的熟度往往烤得不夠！実は想像してるより焼くんすよ——要比你想像中烤得更熟，タン真正的甜味與濃郁肉香才會跑出來。」"
+        seasoning: '岩塩、わさび、レモン、青唐辛子味噌',
+        drink: 'レモンサワー、辛口ハイボール'
       },
       {
-        id: "03_tanshita",
-        num: "03",
-        category: "tan",
-        chapterName: "第一章：タン編",
-        shortJp: "タン下（観音開き）",
-        nameJp: "タン下（観音開き）",
-        nameZh: "牛舌下（蝴蝶刀大片切）",
-        aliases: "牛舌下、牛舌筋、タンカルビ、観音開き",
-        timeRange: "10:12 - 12:36",
-        ytStart: 614,
-        ytEnd: 735,
-        donenessType: "well",
-        donenessLabel: "🔥 業火でしっかり焼き（必烤全熟）",
-        timingStrong: "表 55~60秒 返し ➔ 裏 20~30秒（計 約80~90秒）",
-        timingNormal: "表 90~110秒 返し ➔ 裏 35~45秒（計 約2~2.5分）",
-        timerPresets: [
-          { label: "⏱️ 強火・表 60秒", sec: 60 },
-          { label: "⏱️ 一般店・表 90秒", sec: 90 },
-          { label: "⏱️ 裏面 25秒", sec: 25 }
+        num: '03',
+        id: 'cut-03',
+        category: 'tan',
+        jpName: 'タン下（観音開き）',
+        zhName: '牛舌下（蝴蝶刀大片展開切）',
+        videoTime: '10:12 - 12:36',
+        ytSec: 612,
+        clip: 'assets/clips/03_tanshita.mp4',
+        strategyBadge: '片面しっかり焼き（表 8 : 裏 2）',
+        badgeType: 'badge-ember',
+        strongTiming: '表 55~60秒 返し ➔ 裏 20~30秒（計 約85秒）',
+        standardTiming: '表 90~110秒 返し ➔ 裏 35~45秒（計 約2~2.5分）',
+        ratioFrontLabel: '表（業火重烤）70%',
+        ratioBackLabel: '裏（收尾）30%',
+        ratioFrontPct: 70,
+        ratioBackPct: 30,
+        flipCue: '在強火（業火）中將第一面烤出深金黃色「ジュワッ」焦脆感與滿滿肉汁才翻面，透過高溫軟化筋膜。',
+        timers: [
+          { label: '強火：表60s ➔ 裏25s', stages: [{ name: '表面重烤（表）', sec: 60 }, { name: '裏面收尾（裏）', sec: 25 }] },
+          { label: '一般店：表100s ➔ 裏40s', stages: [{ name: '表面重烤（表）', sec: 100 }, { name: '裏面收尾（裏）', sec: 40 }] }
         ],
-        flipStrategy: "片面しっかり焼き（單面徹底重烤）・表裏 8 : 2",
-        flipSignal: "第一面徹底烤 60~90 秒出深金黃「ジュワッ」焦脆感再翻面",
-        sauce: "ニンニク醤油（蒜味醬油）",
-        goldenRule: "「内臓肉系は『業火（劫火）の中で旨くなる』！第一面重烤整整 1 分鐘到焦香酥脆，タン下釋放出的濃郁甘甜甚至超越タン元！」",
-        clipFile: "assets/clips/03_tanshita.mp4",
-        clipCues: [
-          { label: "観音開き展開下網", sec: 3 },
-          { label: "業火60s翻面ジュワッ焦色", sec: 42 },
-          { label: "裏面25s微烤完成", sec: 84 }
+        keyframes: [
+          { src: 'assets/images/03_tanshita_1.jpg', caption: 'Step 1：観音開き大片展開鋪滿強火區' },
+          { src: 'assets/images/03_tanshita_2.jpg', caption: 'Step 2：第一面烤足 60 秒呈深金黃焦脆' },
+          { src: 'assets/images/03_tanshita_3.jpg', caption: 'Step 3：翻面烤 25 秒後剪開享用' }
         ],
-        stepsPhotos: [
-          { img: "assets/images/03_tanshita_1.jpg", title: "Step 1｜観音開き平鋪烤 60~90秒", desc: "將蝴蝶刀切開的タン下平鋪於強火區，第一面徹底放置重烤。" },
-          { img: "assets/images/03_tanshita_2.jpg", title: "Step 2｜業火重烤・ジュワッ焦香", desc: "強火約 60 秒後翻面呈現深金黃焦脆，筋膜與膠質轉化為濃郁甘甜。" },
-          { img: "assets/images/03_tanshita_3.jpg", title: "Step 3｜裏面輕烤 20~30秒起鍋", desc: "第一面烤透後，裏面只需稍微烙過 20~30 秒即可起鍋。" }
+        steps: [
+          '<strong>観音開き（蝴蝶刀展開）攤平：</strong><code>タン下</code> 筋膜豐富，切成大片展開後整片鋪在強火區。',
+          '<strong>第一面業火重烤 55～60 秒：</strong>勇敢讓第一面在強火中烤足 1 分鐘，烤出深金黃焦脆感，把硬筋轉化為酥脆膠質。',
+          '<strong>翻面 20～30 秒剪開：</strong>翻面短暫烤 25 秒後用剪刀剪成適口大小，濃縮肉味與甘甜度甚至凌駕於 <code>タン元</code>！'
         ],
-        stepsText: [
-          "<strong>認識部位</strong>：タン下富含筋膜與膠質，焼肉ホドリ採用蝴蝶刀（観音開き）切成大片狀（判を大きめに取る）。",
-          "<strong>第一面重烤（強火 55~60秒／一般店 90~110秒）</strong>：タン下若不烤熟會咬不動且沒味道；放在強火中徹底重烤約 1 分鐘（一般店約 1.5 分鐘），膠質軟化後反而彈牙多汁。",
-          "<strong>翻面與收尾（強火 20~30秒／一般店 35~45秒）</strong>：翻面確認呈現強烈的「ジュワッ」金黃焦香後，裏面只需再烤 20~30 秒即可起鍋（片面をしっかり焼くのが鉄則）。"
-        ],
-        proTip: "宰さん與試吃搭檔一致驚嘆：「タン元よりタン下の方がうまいよ！烤透的タン下肉味濃度與甘甜度甚至勝過タン元！」"
+        seasoning: '塩ダレ、ブラックペッパー、レモン',
+        drink: '生ビール（黒ラベル）'
       },
       {
-        id: "04_tail",
-        num: "04",
-        category: "akamotsu",
-        chapterName: "第二章：内臓肉・赤モツ編",
-        shortJp: "テール",
-        nameJp: "テール（牛テールスライス）",
-        nameZh: "切片牛尾",
-        aliases: "牛尾、烤牛尾、テール焼き",
-        timeRange: "12:37 - 14:58",
-        ytStart: 762,
-        ytEnd: 868,
-        donenessType: "well",
-        donenessLabel: "🔥 しっかり焼き（焼き鳥屋の色合い）",
-        timingStrong: "表 50秒 返し ➔ 裏 40秒（計 約90秒）",
-        timingNormal: "表 80~100秒 返し ➔ 裏 60~80秒（計 約2.5~3分）",
-        timerPresets: [
-          { label: "⏱️ 強火・表 50秒", sec: 50 },
-          { label: "⏱️ 一般店・表 90秒", sec: 90 },
-          { label: "⏱️ 強火・裏 40秒", sec: 40 }
+        num: '04',
+        id: 'cut-04',
+        category: 'tan',
+        jpName: 'テール（牛テールスライス）',
+        zhName: '帶骨切片牛尾（直火燒烤行家極品）',
+        videoTime: '12:37 - 14:58',
+        ytSec: 757,
+        clip: 'assets/clips/04_tail.mp4',
+        strategyBadge: '強火一発で決める（表 6 : 裏 5）',
+        badgeType: 'badge-ember',
+        strongTiming: '表 50秒 返し ➔ 裏 40秒（計 約90秒）',
+        standardTiming: '表 80~100秒 返し ➔ 裏 60~80秒（計 約2.5~3分）',
+        ratioFrontLabel: '表（一發決勝）55%',
+        ratioBackLabel: '裏（焦香收尾）45%',
+        ratioFrontPct: 55,
+        ratioBackPct: 45,
+        flipCue: '不中途偷翻，第一面烤出如「焼き鳥屋（燒鳥店）」烤雞肉串般的金黃微焦色澤與焦香油泡。',
+        timers: [
+          { label: '強火：表50s ➔ 裏40s', stages: [{ name: '表面（表）', sec: 50 }, { name: '裏面（裏）', sec: 40 }] },
+          { label: '一般店：表90s ➔ 裏70s', stages: [{ name: '表面（表）', sec: 90 }, { name: '裏面（裏）', sec: 70 }] }
         ],
-        flipStrategy: "一発で決める（強火一發決勝）・表裏 6 : 5",
-        flipSignal: "第一面一次烤滿 50~90 秒至深金黃褐色，絕不中途偷翻",
-        sauce: "塩・コショウ（鹽味胡椒）或特製タレ直接品嚐濃縮膠質旨味",
-        goldenRule: "「テールは一発でここまで決めたい！第一面不翻動直烤 50 秒（一般店約 90 秒），背面再烤 40 秒，烤到像焼き鳥屋（烤雞串店）那種金黃微焦色澤就對了！」",
-        clipFile: "assets/clips/04_tail.mp4",
-        clipCues: [
-          { label: "強火下網", sec: 4 },
-          { label: "50s一発で決める翻面", sec: 50 },
-          { label: "裏40s焼き鳥色完成", sec: 60 }
+        keyframes: [
+          { src: 'assets/images/04_tail_1.jpg', caption: 'Step 1：帶骨切片牛尾置於強火中央' },
+          { src: 'assets/images/04_tail_2.jpg', caption: 'Step 2：50 秒一發翻面呈燒鳥店金黃焦色' },
+          { src: 'assets/images/04_tail_3.jpg', caption: 'Step 3：雙面烤透直接拿起來連骨啃食' }
         ],
-        stepsPhotos: [
-          { img: "assets/images/04_tail_1.jpg", title: "Step 1｜強火直球對決 50~90秒", desc: "テール富含骨邊筋膜與油脂，需靠強火長時間單面逼出香氣。" },
-          { img: "assets/images/04_tail_2.jpg", title: "Step 2｜一発で決める（不亂翻）", desc: "強火 50 秒翻面，一次烤出深褐色焦香。" },
-          { img: "assets/images/04_tail_3.jpg", title: "Step 3｜裏面再烤 40~70秒", desc: "呈現如同焼き鳥屋烤雞串般的金黃微焦，濃縮肉味極為驚人。" }
+        steps: [
+          '<strong>強火一発で決める（一發決勝）：</strong><code>テール</code> 緊貼尾骨、富含膠質與筋膜，放上強火正上方烤足 <strong>50 秒</strong> 絕不中途偷翻。',
+          '<strong>燒鳥店般的金黃焼き目：</strong>翻面時表面應呈現如燒鳥串般的金黃微焦色澤，背面再烤 <strong>40 秒</strong>。',
+          '<strong>連骨豪邁啃食：</strong>直接用手或夾子拿起來啃食骨邊肉，濃縮的牛尾湯精華在口中炸開。'
         ],
-        stepsText: [
-          "<strong>強火下網（第一面：強火 50秒／一般店 80~100秒）</strong>：將テール放在炭火最旺區域，第一面放著不要動，一次烤到深金黃褐色再翻面（一発でここまで決めたい）。",
-          "<strong>裏面重烤（第二面：強火 40秒／一般店 60~80秒）</strong>：翻面後繼續重烤約 40 秒，直到雙面都呈現如同焼き鳥屋（燒鳥店）烤雞腿串般的金黃焦香色澤即可起鍋。"
-        ],
-        proTip: "燒肉最講究火力（火力がすごい大事）。若遇到黑炭還沒燒透或瓦斯爐老舊火力弱的店家，單面請務必放到 90 秒以上，不可頻繁翻動導致肉汁流失。"
+        seasoning: '特製塩ダレ、粗挽き胡椒（無需沾醬直接吃）',
+        drink: 'キンキンに冷えたビール'
       },
       {
-        id: "05_hatsu",
-        num: "05",
-        category: "akamotsu",
-        chapterName: "第二章：内臓肉・赤モツ編",
-        shortJp: "ハツ",
-        nameJp: "ハツ（牛心臓）",
-        nameZh: "牛心（レア vs しっかり焼き）",
-        aliases: "牛心、ココロ、ハツ焼き",
-        timeRange: "15:00 - 19:22",
-        ytStart: 900,
-        ytEnd: 1108,
-        donenessType: "dual",
-        donenessLabel: "⚖️ レア焼き / しっかり焼き 両派OK",
-        timingStrong: "【レア】表10~12秒＋裏8~10秒（計 約20秒）｜【しっかり】表35~40秒＋裏30~35秒（計 約70秒）",
-        timingNormal: "【レア】表15~20秒＋裏15秒（計 約35秒）｜【しっかり】表50~60秒＋裏45~50秒（計 約1.5~2分）",
-        timerPresets: [
-          { label: "⏱️ レア片面 12秒", sec: 12 },
-          { label: "⏱️ しっかり片面 40秒", sec: 40 },
-          { label: "⏱️ 一般店しっかり 55秒", sec: 55 }
+        num: '05',
+        id: 'cut-05',
+        category: 'horumon',
+        jpName: 'ハツ（牛心臓）',
+        zhName: '牛心（內臟中唯二可選レア／全熟雙流派）',
+        videoTime: '15:00 - 19:22',
+        ytSec: 900,
+        clip: 'assets/clips/05_hatsu.mp4',
+        strategyBadge: '雙流派：20秒レア vs 70秒しっかり',
+        badgeType: 'badge-amber',
+        strongTiming: '【A.レア】表 10~12秒 ➔ 裏 8~10秒（計 約20秒）｜【B.しっかり】表 35~40秒 ➔ 裏 30~35秒（計 約70秒）',
+        standardTiming: '【A.レア】表 15~20秒 ➔ 裏 15秒（計 約35秒）｜【B.しっかり】表 50~60秒 ➔ 裏 45~50秒（計 約1.5~2分）',
+        ratioFrontLabel: '表 55%（レア12s / 全熟38s）',
+        ratioBackLabel: '裏 45%（レア8s / 全熟32s）',
+        ratioFrontPct: 55,
+        ratioBackPct: 45,
+        flipCue: '【レア】兩面微變色即起鍋，中心鮮紅如法式ロースト；【しっかり】烤至兩面「こんがり」金黃微焦，引爆濃厚內臟旨味。',
+        timers: [
+          { label: '流派A レア：表12s ➔ 裏8s', stages: [{ name: 'レア表面（表）', sec: 12 }, { name: 'レア裏面（裏）', sec: 8 }] },
+          { label: '流派B 全熟：表38s ➔ 裏32s', stages: [{ name: '全熟表面（表）', sec: 38 }, { name: '全熟裏面（裏）', sec: 32 }] }
         ],
-        flipStrategy: "レア：正反各 10~15 秒｜しっかり焼き：正反各 35~55 秒至こんがり",
-        flipSignal: "一盤通常有多片，強烈建議兩種秒數各烤一半比較！",
-        sauce: "ニンニク醤油、ごま油塩、或生姜醤油",
-        goldenRule: "「内臓肉の中で『レバー』と『ハツ』だけはレアでも旨い！想吃法式ロースト般的上品清甜，正反各烤 10~15 秒；想吃内臓肉特有的狂野焦香，正反各烤 35~55 秒至こんがり！」",
-        clipFile: "assets/clips/05_hatsu.mp4",
-        clipCues: [
-          { label: "流派A：レア焼き下網", sec: 3 },
-          { label: "レア(20s)焼き色", sec: 22 },
-          { label: "流派B：しっかり焼き(70s)", sec: 42 },
-          { label: "こんがり完成", sec: 78 }
+        keyframes: [
+          { src: 'assets/images/05_hatsu_1.jpg', caption: 'Step 1：全內臟僅レバー與ハツ可選レア' },
+          { src: 'assets/images/05_hatsu_2.jpg', caption: 'Step 2：流派A（20秒レア）中心鮮紅清爽' },
+          { src: 'assets/images/05_hatsu_3.jpg', caption: 'Step 3：流派B（70秒全熟）こんがり焦香濃厚' }
         ],
-        stepsPhotos: [
-          { img: "assets/images/05_hatsu_1.jpg", title: "Step 1｜新鮮ハツ下網", desc: "内臓系中少數無腥味、纖維細緻，可自由選擇秒數的部位。" },
-          { img: "assets/images/05_hatsu_2.jpg", title: "流派 A｜レア焼き（正反各 10~15秒）", desc: "總計約 20~30 秒雙面變色即起鍋，中心鮮紅，香氣上品清爽。" },
-          { img: "assets/images/05_hatsu_3.jpg", title: "流派 B｜しっかり焼き（正反各 35~55秒）", desc: "總計約 70~100 秒烤到表面金黃こんがり，釋放濃郁内臓旨味。" }
+        steps: [
+          '<strong>內臟食安知識：</strong>所有ホルモン當中，只有新鮮的 <code>レバー（肝）</code> 與 <code>ハツ（心）</code> 因內部無腸道菌，可以選擇烤レア。',
+          '<strong>流派 A【レア焼き・計 20 秒】：</strong>強火 <strong>表 10～12 秒 ➔ 裏 8～10 秒</strong>。表面斷生、中心紅潤，如法式 Roast 料理般高雅清爽。',
+          '<strong>流派 B【しっかり焼き・計 70 秒（職人激推）】：</strong>強火 <strong>表 35～40 秒 ➔ 裏 30～35 秒</strong> 烤至金黃微焦，水分微收後反而釋放強烈的內臟野性甘甜！'
         ],
-        stepsText: [
-          "<strong>流派 A：レア焼き（強火正反各 10~12秒／一般店各 15~20秒）</strong>——總時間僅約 20~35 秒，表面微變色、中心保持極生紅潤即可起鍋。First Impression 非常優雅（上品な香り），帶有法式ロースト般的爽脆多汁感。",
-          "<strong>流派 B：しっかり焼き（強火正反各 35~40秒／一般店各 50~60秒）</strong>——總時間約 70~110 秒，雙面徹底加熱至表面金黃微焦（こんがり焼く）。激發出ハツ與レバー特有的濃郁内臓香氣與野性多汁感（ジャンクな感じ）。",
-          "<strong>餐桌實戰建議</strong>：去燒肉店點ハツ一盤通常不只一片，強烈建議<strong>一半烤 20 秒レア、一半烤 70 秒しっかり焼き</strong>，找出你最愛的那一派！"
-        ],
-        proTip: "宰さん原本以為自己偏愛レア焼き的上品感，但現場與員工盲測對比後，員工反而更愛しっかり焼き爆發出的濃郁内臓香！"
+        seasoning: '生姜醤油、ごま油＋塩、辛子味噌',
+        drink: 'ハイボール、焼酎ソーダ割り'
       },
       {
-        id: "06_tsurami",
-        num: "06",
-        category: "akamotsu",
-        chapterName: "第二章：内臓肉・赤モツ編",
-        shortJp: "ツラミ",
-        nameJp: "ツラミ（ホホ肉・ツラ）",
-        nameZh: "牛頰肉／牛臉頰",
-        aliases: "牛頰肉、牛臉頰肉、天肉、ホホ肉",
-        timeRange: "19:23 - 22:07",
-        ytStart: 1163,
-        ytEnd: 1295,
-        donenessType: "well",
-        donenessLabel: "🔥 しっかり焼き（火を入れるとサクッと柔らかい）",
-        timingStrong: "表放置 75~80秒 返し ➔ 裏 35~40秒（計 約2分）",
-        timingNormal: "表放置 100~120秒 返し ➔ 裏 50~60秒（計 約2.5~3分）",
-        timerPresets: [
-          { label: "⏱️ 強火・表 75秒", sec: 75 },
-          { label: "⏱️ 一般店・表 110秒", sec: 110 },
-          { label: "⏱️ 裏面 40秒", sec: 40 }
+        num: '06',
+        id: 'cut-06',
+        category: 'horumon',
+        jpName: 'ツラミ（ホホ肉）',
+        zhName: '牛頰肉（越烤越酥軟的膠質內臟肉）',
+        videoTime: '19:23 - 22:07',
+        ytSec: 1163,
+        clip: 'assets/clips/06_tsurami.mp4',
+        strategyBadge: '波網防縮・割と放置（表 7 : 裏 3）',
+        badgeType: 'badge-ember',
+        strongTiming: '表 75~80秒 返し ➔ 裏 35~40秒（計 約115~120秒 / 2分）',
+        standardTiming: '表 100~120秒 返し ➔ 裏 50~60秒（計 約2.5~3分）',
+        ratioFrontLabel: '表（放置出汁）67%',
+        ratioBackLabel: '裏（熟成酥軟）33%',
+        ratioFrontPct: 67,
+        ratioBackPct: 33,
+        flipCue: '千萬別太早翻！等到上表面「じわじわ」滲出滿滿油脂與肉汁水珠（約 75~80 秒）才翻面；烤熟透反而變得「サクッと柔らかい（酥軟）」。',
+        timers: [
+          { label: '強火：表78s ➔ 裏38s', stages: [{ name: '表面放置（表）', sec: 78 }, { name: '裏面收尾（裏）', sec: 38 }] },
+          { label: '一般店：表110s ➔ 裏55s', stages: [{ name: '表面放置（表）', sec: 110 }, { name: '裏面收尾（裏）', sec: 55 }] }
         ],
-        flipStrategy: "波浪網防縮放置 75~110秒 → 浮油翻面 → 裏面 40~60秒",
-        flipSignal: "約 75~110 秒表面「じわじわ」浮出油脂與肉汁水珠時翻面",
-        sauce: "ニンニク醤油（蒜味醬油）、或包裹大量ネギ（蔥花）",
-        goldenRule: "「内臓肉の特徴は『火を入れることでサクッと柔らかくなる（越烤越酥軟）』！第一面耐心放滿 75~110 秒直到浮出油珠再翻面，美味度與 CP 值甚至凌駕タン！」",
-        clipFile: "assets/clips/06_tsurami.mp4",
-        clipCues: [
-          { label: "波の網に引っ掛ける", sec: 3 },
-          { label: "75sじわじわ脂が浮く", sec: 42 },
-          { label: "翻面焦香重烤", sec: 58 },
-          { label: "裏面40s完熟起鍋", sec: 86 }
+        keyframes: [
+          { src: 'assets/images/06_tsurami_1.jpg', caption: 'Step 1：邊緣卡進波浪烤網溝槽防止捲縮' },
+          { src: 'assets/images/06_tsurami_2.jpg', caption: 'Step 2：放置 78 秒至表面じわじわ冒出肉汁' },
+          { src: 'assets/images/06_tsurami_3.jpg', caption: 'Step 3：翻面烤 38 秒達成サクッと酥軟口感' }
         ],
-        stepsPhotos: [
-          { img: "assets/images/06_tsurami_1.jpg", title: "Step 1｜波網防縮・放置 75秒+", desc: "ツラミ受熱極易蜷縮，將邊緣微勾在波浪烤網（波の網）上維持平展。" },
-          { img: "assets/images/06_tsurami_2.jpg", title: "Step 2｜75~110秒「じわじわ」浮油", desc: "割と放置（不要亂動），直到表面滲出細密油脂與肉汁水珠才翻面。" },
-          { img: "assets/images/06_tsurami_3.jpg", title: "Step 3｜翻面再烤 35~50秒至酥軟", desc: "翻面呈現深金黃焦色，膠質受熱轉化後口感サクッと柔らかい！" }
+        steps: [
+          '<strong>波の網に引っ掛ける（防縮網技）：</strong><code>ツラミ</code> 受熱極易捲縮，放上網時將肉片邊緣微微卡進波浪烤網溝槽中鋪平展開。',
+          '<strong>割と放置（靜置 75～80 秒不翻）：</strong>第一面耐心等到表面「じわじわ」浮出油光與肉汁水珠時才翻面。',
+          '<strong>內臟肉反轉法則：</strong><code>ツラミ</code> 屬於內臟肉系，背面再烤 <strong>35～40 秒</strong> 徹底烤熟後，膠原蛋白軟化反而變得「サクッと柔らかい（酥軟好咬）」！'
         ],
-        stepsText: [
-          "<strong>職人秘技「波の網に引っ掛ける」</strong>（燒肉達人『肉バカ小池さん』秘技）：ツラミ受熱後會順著長邊強烈收縮（縮む）。若店家使用波浪烤網，下網時可將肉片兩端稍微勾在網目上，減少收縮幅度，讓火候均勻。",
-          "<strong>第一面放置等待浮油（強火 75~80秒／一般店 100~120秒）</strong>：下網後基本放置不動（割と放置），直到肉片表面開始<strong>「じわじわ」浮出油脂與肉汁</strong>。",
-          "<strong>翻面徹底烤熟（強火 35~40秒／一般店 50~60秒）</strong>：此時翻面，第一面會呈現漂亮的焦褐色（小池先生甚至喜歡烤到像ベーコン培根一樣脆）。第二面同樣烤熟後即可起鍋。"
-        ],
-        proTip: "宰さん直言：「ツラミは網焼きに限ります！比起紅酒燉煮，ツラミ絕對是用烤網直火燒烤最好吃，我個人覺得比タン還美味！」"
+        seasoning: '特製籾ダレ、青唐辛子味噌、白飯',
+        drink: '白飯（ライス）、ビール'
       },
       {
-        id: "07_rib_thick",
-        num: "07",
-        category: "edniku",
-        chapterName: "第三章：枝肉・厚切り編",
-        shortJp: "リブロース芯（厚切り）",
-        nameJp: "リブロース芯（ステーキカット 1〜1.5cm）",
-        nameZh: "厚切肋眼芯（牛排切）",
-        aliases: "厚切肋眼芯、サーロイン芯、ステーキカット、厚切りリブロース",
-        timeRange: "22:08 - 25:22",
-        ytStart: 1330,
-        ytEnd: 1480,
-        donenessType: "dual",
-        donenessLabel: "⚖️ 超レア炙り / 🔥 職人推奨しっかり焼き",
-        timingStrong: "【超レア】表裏各 8~10秒（計 約20秒）｜【しっかり焼き】表45~50秒＋裏40~45秒＋カット後15秒（計 約105秒）",
-        timingNormal: "【超レア】表裏各 15秒（計 約30秒）｜【しっかり焼き】表75~90秒＋裏60~75秒＋カット後25秒（計 約2.5~3分）",
-        timerPresets: [
-          { label: "⏱️ 超レア片面 10秒", sec: 10 },
-          { label: "⏱️ 強火しっかり片面 45秒", sec: 45 },
-          { label: "⏱️ 一般店しっかり片面 80秒", sec: 80 }
+        num: '07',
+        id: 'cut-07',
+        category: 'wagyu',
+        jpName: 'リブロース芯（ステーキカット 1〜1.5cm）',
+        zhName: '厚切肋眼芯牛排（極生炙燒 vs 職人全熟脂香）',
+        videoTime: '22:08 - 25:22',
+        ytSec: 1328,
+        clip: 'assets/clips/07_rib_thick.mp4',
+        strategyBadge: '雙流派：20秒超レア vs 105秒しっかり',
+        badgeType: 'badge-amber',
+        strongTiming: '【A.超レア】表 8~10秒 ➔ 裏 8~10秒（計 約20秒）｜【B.職人推奨】表 45~50秒 ➔ 裏 40~45秒 ➔ 剪開 15秒（計 約105秒）',
+        standardTiming: '【A.超レア】表 15秒 ➔ 裏 15秒（計 約30秒）｜【B.職人推奨】表 75~90秒 ➔ 裏 60~75秒 ➔ 剪開 25秒（計 約2.5~3分）',
+        ratioFrontLabel: '表 48%（レア10s / 全熟50s）',
+        ratioBackLabel: '裏＋斷面 52%（レア10s / 全熟55s）',
+        ratioFrontPct: 48,
+        ratioBackPct: 52,
+        flipCue: '【超レア】表面上色中心生嫩，配わさび醤油；【職人推奨・しっかり焼き】烤至外層カリッと金黃酥脆，徹底喚醒「和牛油の香り」且更好咬斷！',
+        timers: [
+          { label: '流派A 超レア：表10s ➔ 裏10s', stages: [{ name: '超レア表面（表）', sec: 10 }, { name: '超レア裏面（裏）', sec: 10 }] },
+          { label: '流派B 職人全熟：表50s ➔ 裏42s ➔ 斷面15s', stages: [{ name: '全熟表面（表）', sec: 50 }, { name: '全熟裏面（裏）', sec: 42 }, { name: '剪開烤斷面', sec: 15 }] }
         ],
-        flipStrategy: "超レア：正反各 10 秒秒烙｜職人推薦：正反各 45~80 秒至金黃後剪開",
-        flipSignal: "想吃生魚片感 10 秒翻；想吃和牛脂香必烤 45~80 秒至外層金黃焦脆",
-        sauce: "わさび醤油（芥末醬油）",
-        goldenRule: "「リブロースの芯やサーロインの芯は自由！想吃炙り刺身感可正反各烙 10 秒；但『生って基本味が出てきてない』，要喚醒和牛脂香與甘甜，職人絕對推薦單面烤滿 45~80 秒！」",
-        clipFile: "assets/clips/07_rib_thick.mp4",
-        clipCues: [
-          { label: "1.5cm厚切下網", sec: 8 },
-          { label: "流派A：超レア(20s)断面", sec: 38 },
-          { label: "流派B：しっかり焼き(105s)", sec: 68 }
+        keyframes: [
+          { src: 'assets/images/07_rib_thick_1.jpg', caption: 'Step 1：頂級 BMS 霜降リブロース芯牛排切' },
+          { src: 'assets/images/07_rib_thick_2.jpg', caption: 'Step 2：流派A（20秒超レア）配山葵醬油如刺身' },
+          { src: 'assets/images/07_rib_thick_3.jpg', caption: 'Step 3：流派B（105秒全熟）喚醒極致和牛脂香' }
         ],
-        stepsPhotos: [
-          { img: "assets/images/07_rib_thick_1.jpg", title: "Step 1｜1.5cm リブロース芯下網", desc: "頂級黑毛和牛肋眼正中心，肉質極致柔嫩。" },
-          { img: "assets/images/07_rib_thick_2.jpg", title: "流派 A｜生肉派：表裏各 8~10秒", desc: "總計僅 20 秒快速烙過即起鍋，側面看中心全紅，如炙り刺身。" },
-          { img: "assets/images/07_rib_thick_3.jpg", title: "流派 B｜職人派：表裏各 45~80秒", desc: "烤到表面焦香再用剪刀剪開微烤 15 秒，油の香り・甘味完全爆發！" }
+        steps: [
+          '<strong>流派 A【超レア焼き・計 20 秒】：</strong>強火 <strong>表 8～10 秒 ➔ 裏 8～10 秒</strong> 剪開，沾 <strong>わさび醤油（山葵醬油）</strong> 如頂級炙り刺身。',
+          '<strong>流派 B【職人推奨・しっかり焼き・計 105 秒】：</strong>強火 <strong>表 45～50 秒 ➔ 裏 40～45 秒 ➔ 剪開烤斷面 15 秒</strong>。',
+          '<strong>為何職人更推烤熟？</strong>生牛油沒有香氣！烤足 105 秒讓外層焦脆，不僅「和牛油の香り」十倍爆發，且肌纖維受熱鬆化後<strong>反而比レア更容易咬斷（歯切れが良い）</strong>！'
         ],
-        stepsText: [
-          "<strong>流派 A：超レア焼き（強火正反各 8~10秒／一般店各 15秒）</strong>——適合狂熱喜愛生肉感的人。總計僅 20~30 秒即起鍋，搭配わさび醤油，吃起來像噴槍炙燒過的生魚片（ガスバーナーで炙ったお刺身），中心微涼滑嫩；缺點是剪刀較難剪斷，且油脂香氣尚未釋放。",
-          "<strong>流派 B：職人推薦しっかり焼き（強火表 45~50秒＋裏 40~45秒／一般店正反各 70~90秒）</strong>——將 1.5cm 厚切雙面烤出紮實的金黃焦香後用剪刀剪開，斷面再微烤 15~20 秒。充分受熱後，不僅<strong>肉質變得更加柔軟好咬（柔らかくなる）</strong>，和牛特有的<strong>油の香りや甘味才會真正站出來</strong>！"
-        ],
-        proTip: "宰さん名言：「生って基本味が出てきてないんですよ。對和牛豪邁地注入火候（ドカンと火を入れる）正是為了喚醒油脂的甘甜與香氣！」"
+        seasoning: '【レア】わさび醤油｜【しっかり】フルーツ醤油ダレ＋白飯',
+        drink: '赤ワイン、ハイボール'
       },
       {
-        id: "08_maki",
-        num: "08",
-        category: "edniku",
-        chapterName: "第四章：枝肉・薄切り＆サガリ編",
-        shortJp: "リブマキ（特上カルビ）",
-        nameJp: "リブマキ（特上カルビ・特殊カルビ）",
-        nameZh: "肋眼捲／特上五花",
-        aliases: "肋眼蓋、老饕肉、特上五花、特上カルビ、マキ、カルビ",
-        timeRange: "26:41 - 29:45",
-        ytStart: 1601,
-        ytEnd: 1752,
-        donenessType: "well",
-        donenessLabel: "🔥 しっかり焼き必須（表10：裏7・脂を落とす）",
-        timingStrong: "表 70秒 返し（10分焼き）➔ 裏 50秒（7分焼き・計 約2分）",
-        timingNormal: "表 90~120秒 返し ➔ 裏 65~85秒（計 約2.5~3.5分）",
-        timerPresets: [
-          { label: "⏱️ 強火・表 70秒", sec: 70 },
-          { label: "⏱️ 強火・裏 50秒", sec: 50 },
-          { label: "⏱️ 一般店・表 100秒", sec: 100 }
+        num: '08',
+        id: 'cut-08',
+        category: 'wagyu',
+        jpName: 'リブマキ（特上カルビ・特殊カルビ）',
+        zhName: '肋眼捲／特上五花（包覆肋眼芯的極上霜降）',
+        videoTime: '26:41 - 29:45',
+        ytSec: 1601,
+        clip: 'assets/clips/08_maki.mp4',
+        strategyBadge: 'じっくり焼く（表 10分熟 : 裏 7分熟）',
+        badgeType: 'badge-ember',
+        strongTiming: '表 70秒（10分熟）返し ➔ 裏 50秒（7分熟）（計 約120秒 / 2分）',
+        standardTiming: '表 90~120秒 返し ➔ 裏 65~85秒（計 約2.5~3.5分）',
+        ratioFrontLabel: '表（10分熟逼油）58%',
+        ratioBackLabel: '裏（7分熟焦香）42%',
+        ratioFrontPct: 58,
+        ratioBackPct: 42,
+        flipCue: '表面呈現深琥珀焦褐色是「フルーツのタレ（蘋果、洋蔥、紅蘿蔔果肉醬汁）」焦糖化，並非烤焦！烤熟逼出多餘牛油才不膩口。',
+        timers: [
+          { label: '強火：表70s(10分熟) ➔ 裏50s(7分熟)', stages: [{ name: '表面10分熟逼油（表）', sec: 70 }, { name: '裏面7分熟收尾（裏）', sec: 50 }] },
+          { label: '一般店：表105s ➔ 裏75s', stages: [{ name: '表面10分熟（表）', sec: 105 }, { name: '裏面7分熟（裏）', sec: 75 }] }
         ],
-        flipStrategy: "焦ってひっくり返さずじっくり・表 10 : 裏 7（70秒 : 50秒）",
-        flipSignal: "第一面烤約 70~100 秒至水果タレ呈現深褐色焦糖化（10分），背面烤 50~75 秒（7分）",
-        sauce: "フルーツ果肉入りタレ（水果燒肉醬汁）＋白飯マスト（必配白飯）",
-        goldenRule: "「マキ（特上カルビ）をレアっぽくすると脂が落ちてないので重たく感じる！第一面耐心烤滿 70 秒讓フルーツのタレ焦糖化（不是肉烤焦！），背面再烤 50 秒（10 : 7 法則），白飯マスト！」",
-        clipFile: "assets/clips/08_maki.mp4",
-        clipCues: [
-          { label: "マキ下網じっくり焼く", sec: 4 },
-          { label: "70s翻面：タレの香ばしい焦げ", sec: 40 },
-          { label: "裏面50s(10:7)起鍋", sec: 88 }
+        keyframes: [
+          { src: 'assets/images/08_maki_1.jpg', caption: 'Step 1：油花極度豐沛的リブマキ（特上カルビ）' },
+          { src: 'assets/images/08_maki_2.jpg', caption: 'Step 2：第一面烤 70 秒讓水果醬汁焦糖化並逼油' },
+          { src: 'assets/images/08_maki_3.jpg', caption: 'Step 3：背面烤 50 秒（10:7法則）配白飯最強' }
         ],
-        stepsPhotos: [
-          { img: "assets/images/08_maki_1.jpg", title: "Step 1｜下網じっくり烤 70~100秒", desc: "マキ油花極豐富且略帶厚度，切忌急著翻面或吃半生不熟。" },
-          { img: "assets/images/08_maki_2.jpg", title: "Step 2｜70秒翻面：タレが焦げてるだけ", desc: "表面深褐色是リンゴ・玉ねぎ・人参等果肉醬汁焦糖化，並非肉烤焦！" },
-          { img: "assets/images/08_maki_3.jpg", title: "Step 3｜裏面烤 50~75秒（表10 : 裏7）", desc: "背面也烤到約 7 分熟度，逼出多餘油脂，配白飯一口入魂！" }
+        steps: [
+          '<strong>重油花切忌烤レア：</strong><code>リブマキ</code> 油脂極豐富，若烤太生等於在喝生油，吃兩片就會覺得太重太膩（重い）。',
+          '<strong>表 10 : 裏 7 逼油法則：</strong>第一面徹底烤 <strong>70 秒（10 分熟）</strong>，翻面再烤 <strong>50 秒（7 分熟）</strong>，把多餘牛油逼滴到火裡。',
+          '<strong>水果醬汁焦糖化：</strong>表面深褐色是蘋果、洋蔥、紅蘿蔔果泥醬汁（フルーツのタレ）的梅納反應焦香，配熱白飯堪稱無敵！'
         ],
-        stepsText: [
-          "<strong>為什麼マキ（特上カルビ）不能吃レア？</strong>圍繞在リブロース芯外圍的「マキ」常在燒肉店以「特上カルビ」登場，且為了防止散開（ばらけちゃう）通常切得稍有厚度。若烤太生，油脂沒有融化滴落，吃起來會非常油膩沉重。",
-          "<strong>第一面放置慢烤（強火 70秒／一般店 90~120秒）</strong>：下網後別急著翻面。烤滿約 70 秒翻面時表面出現深褐色焦痕，<strong>千萬別以為烤焦了（これタレが焦げてるだけでお肉焦げてない）！那是醬汁中的蘋果、洋蔥、紅蘿蔔果肉受熱焦糖化</strong>。",
-          "<strong>第二面 10 : 7 黃金比例（強火 50秒／一般店 65~85秒）</strong>：如果第一面的焦香程度是 10 分（70秒），翻面後裏面也要繼續烤到約 <strong>7 分（50秒）</strong>的程度，讓多餘油脂滴落、化為滿口甘甜。"
-        ],
-        proTip: "片尾補充：如果在一般燒肉店點到油脂過多的普通カルビ，<strong>最忌諱烤得半生不熟（中途半端が一番ダメ）</strong>！要嘛像烤牛脂一樣徹底烤 2~3 分鐘到カリカリ（焦脆逼油），要嘛極薄切秒涮。"
+        seasoning: 'フルーツ醤油ダレ（果香燒肉醬）',
+        drink: '炊きたての白飯（ライス必須！）'
       },
       {
-        id: "09_silk_rosu",
-        num: "09",
-        category: "edniku",
-        chapterName: "第四章：枝肉・薄切り＆サガリ編",
-        shortJp: "シルクロース（10秒ロース）",
-        nameJp: "ロース芯 薄切り（シルクロース・10秒ロース）",
-        nameZh: "薄切肋眼芯／絲綢里肌",
-        aliases: "絲綢里肌、10秒ロース、薄切里肌、シルクロース、ロース芯",
-        timeRange: "29:46 - 32:55",
-        ytStart: 1790,
-        ytEnd: 1915,
-        donenessType: "dual",
-        donenessLabel: "⚖️ 10秒レア / 全熟ホロホロ 両派OK",
-        timingStrong: "【10秒レア】表 5秒 返し ➔ 裏「1,2,3,4,5」秒（計10秒）｜【しっかり】表 25~30秒 ➔ 裏 20~25秒（計 約50秒）",
-        timingNormal: "【10秒レア】表 7~8秒 返し ➔ 裏 5~7秒（計 約15秒）｜【しっかり】表 40~45秒 ➔ 裏 30~35秒（計 約75秒）",
-        timerPresets: [
-          { label: "⏱️ 10秒ロース・片面 5秒!", sec: 5 },
-          { label: "⏱️ 一般店レア・片面 8秒", sec: 8 },
-          { label: "⏱️ しっかり・片面 30秒", sec: 30 }
+        num: '09',
+        id: 'cut-09',
+        category: 'wagyu',
+        jpName: 'シルクロース（ロース芯薄切り・10秒ロース）',
+        zhName: '絲綢里肌／薄切肋眼芯（10秒レア vs 50秒ホロホロ）',
+        videoTime: '29:46 - 32:55',
+        ytSec: 1786,
+        clip: 'assets/clips/09_silk_rosu.mp4',
+        strategyBadge: '2枚レア(10秒) ＋ 2枚しっかり(50秒)',
+        badgeType: 'badge-amber',
+        strongTiming: '【A.10秒ロース】表 5秒 ➔ 裏默數 5秒（計 10秒）｜【B.しっかりホロホロ】表 25~30秒 ➔ 裏 20~25秒（計 約50秒）',
+        standardTiming: '【A.10秒ロース】表 7~8秒 ➔ 裏 5~7秒（計 約15秒）｜【B.しっかりホロホロ】表 40~45秒 ➔ 裏 30~35秒（計 約75秒）',
+        ratioFrontLabel: '表 50%（レア5s / 全熟28s）',
+        ratioBackLabel: '裏 50%（レア5s / 全熟22s）',
+        ratioFrontPct: 50,
+        ratioBackPct: 50,
+        flipCue: '【10秒ロース】放上網 5 秒即翻、背面數「1,2,3,4,5」起鍋；【しっかり】烤足 50 秒呈「ホロホロ」一抿即散鬆化感，與白飯同步化開！',
+        timers: [
+          { label: '流派A 10秒ロース：表5s ➔ 裏5s', stages: [{ name: '表面秒烤（表）', sec: 5 }, { name: '裏面默數5秒（裏）', sec: 5 }] },
+          { label: '流派B ホロホロ全熟：表28s ➔ 裏22s', stages: [{ name: '全熟表面（表）', sec: 28 }, { name: '全熟裏面（裏）', sec: 22 }] }
         ],
-        flipStrategy: "流派A：表 5 秒＋裏 5 秒｜流派B：表裏各 25~40 秒烤透至ホロホロ",
-        flipSignal: "一盤若有 4 枚，強烈推薦「2 枚烤 10 秒レア、2 枚烤 50 秒しっかり焼き」！",
-        sauce: "特製タレ（燒肉醬汁）＋オン・ザ・ライス（配白飯）",
-        goldenRule: "「薄切りのロース芯（シルクロース）は『表5秒＋裏5秒＝10秒ロース』で上品に旨い！但把它烤滿 50 秒到全熟反而歯切れが良くなり、ホロホロになってお米と一緒に消えていく！」",
-        clipFile: "assets/clips/09_silk_rosu.mp4",
-        clipCues: [
-          { label: "流派A：10秒ロース(表5s)", sec: 4 },
-          { label: "返して 1-2-3-4-5 起鍋", sec: 18 },
-          { label: "流派B：しっかり焼き(50s)ホロホロ", sec: 42 }
+        keyframes: [
+          { src: 'assets/images/09_silk_rosu_1.jpg', caption: 'Step 1：將薄切シルクロース完整攤平於強火網面' },
+          { src: 'assets/images/09_silk_rosu_2.jpg', caption: 'Step 2：流派A（5秒+5秒）絲綢般滑嫩不燙口' },
+          { src: 'assets/images/09_silk_rosu_3.jpg', caption: 'Step 3：流派B（50秒全熟）ホロホロ鬆化配白飯同調' }
         ],
-        stepsPhotos: [
-          { img: "assets/images/09_silk_rosu_1.jpg", title: "Step 1｜極薄切シルクロース下網", desc: "因為切得極薄，受熱極快，可自由演繹 10 秒與 50 秒兩種口感。" },
-          { img: "assets/images/09_silk_rosu_2.jpg", title: "流派 A｜表 5 秒＋裏 5 秒（計10秒）", desc: "正面 5 秒翻面、背面默數 1~5 秒即起鍋，タレのレア感が上品！" },
-          { img: "assets/images/09_silk_rosu_3.jpg", title: "流派 B｜表裏各 25~40秒（ホロホロ）", desc: "焼いた方が柔らかくなり歯切れが良い！與白飯在口中同步化開。" }
+        steps: [
+          '<strong>一盤 4 片的「2 : 2 享用法則」：</strong>前 2 片烤 10 秒レア吃絲滑鮮嫩，後 2 片烤 50 秒全熟吃脂香鬆化！',
+          '<strong>流派 A【10秒ロース・レア焼き】：</strong>攤平放上網 <strong>5 秒</strong> 立即翻面，背面默數 <strong>「1、2、3、4、5」秒</strong> 起鍋，口感如絲綢般滑順。',
+          '<strong>流派 B【しっかり焼き・計 50 秒】：</strong>強火 <strong>表 25～30 秒 ➔ 裏 20～25 秒</strong>。烤熟後肉質轉為 <strong>「ホロホロ（一抿鬆化）」</strong>，包白飯入口會在同一秒鐘同步化開！'
         ],
-        stepsText: [
-          "<strong>流派 A：10秒ロース・レア焼き（強火表 5秒＋裏 5秒／一般店表裏各 7~8秒）</strong>——將薄切ロース芯平鋪上網，第一面烤約 5 秒即翻面，背面再默數「1、2、3、4、5」秒馬上起鍋（共 10 秒）。タレ的甘甜與半熟嫩肉交融，且不燙口（適合猫舌族群）。",
-          "<strong>流派 B：しっかり焼き・ホロホロ（強火表 25~30秒＋裏 20~25秒／一般店共約 75秒）</strong>——雙面徹底烤透上色。實測發現<strong>焼いた方が柔らかくなり、歯切れが良くなる（烤熟反而更軟嫩好咬斷）</strong>！配白飯時，肉片會跟米飯在嘴裡同步化開消失（お米となくなっていくのが一緒）。",
-          "<strong>4枚あったら 2 : 2 で行く</strong>：一盤若有 4 片，直接「2 片吃 10 秒レア、2 片吃 50 秒全熟配飯」，一次享受兩種極致風味！"
-        ],
-        proTip: "點擊卡片上的「⏱️ 10秒ロース・片面 5秒!」按鈕，即可在餐桌上直接聽提示音精準翻面！"
+        seasoning: '醤油ベースのタレ、卵黄ダレ、オン・ザ・ライス',
+        drink: '白飯（ライス）、緑茶ハイ'
       },
       {
-        id: "10_shinshin",
-        num: "10",
-        category: "edniku",
-        chapterName: "第四章：枝肉・薄切り＆サガリ編",
-        shortJp: "シンシン（上赤身）",
-        nameJp: "シンシン（マルシン・カメノコ・ランプ・イチボ等の上赤身）",
-        nameZh: "芯芯＆和牛上赤身（依厚度決定秒數）",
-        aliases: "芯芯、內桃子、上赤身、ランプ、イチボ、カメノコ、カタサンカク、トウガラシ",
-        timeRange: "32:56 - 36:28",
-        ytStart: 1976,
-        ytEnd: 2130,
-        donenessType: "well",
-        donenessLabel: "🔥 厚さで判断（5~8mm以上はしっかり焼き必須！）",
-        timingStrong: "【ペランペラン薄切り】表裏各 5~8秒（計 約15秒）｜【5~8mm厚め】表 60~75秒 ➔ 裏 45~60秒（計 約2分）",
-        timingNormal: "【ペランペラン薄切り】表裏各 8~10秒（計 約20秒）｜【5~8mm厚め】表 90~110秒 ➔ 裏 70~90秒（計 約3分）",
-        timerPresets: [
-          { label: "⏱️ 薄切り・片面 6秒", sec: 6 },
-          { label: "⏱️ 厚め強火・表 65秒", sec: 65 },
-          { label: "⏱️ 厚め一般店・表 95秒", sec: 95 }
+        num: '10',
+        id: 'cut-10',
+        category: 'wagyu',
+        jpName: 'シンシン（マルシン・カメノコ・ランプ・イチボ等の上赤身）',
+        zhName: '芯芯＆和牛上赤身（依切片厚度決定生死！）',
+        videoTime: '32:56 - 36:28',
+        ytSec: 1976,
+        clip: 'assets/clips/10_shinshin.mp4',
+        strategyBadge: '依厚度決定：薄切15秒 vs 厚切2分',
+        badgeType: 'badge-ember',
+        strongTiming: '【2~3mm薄切】表 5~8秒 ➔ 裏 5~8秒（計 約15秒）｜【5~8mm厚め（影片示範）】表 60~75秒 ➔ 裏 45~60秒（計 約120秒 / 2分）',
+        standardTiming: '【2~3mm薄切】表 8~10秒 ➔ 裏 8~10秒（計 約20秒）｜【5~8mm厚め】表 90~110秒 ➔ 裏 70~90秒（計 約2.5~3.5分）',
+        ratioFrontLabel: '表 56%（薄7s / 厚68s）',
+        ratioBackLabel: '裏 44%（薄7s / 厚52s）',
+        ratioFrontPct: 56,
+        ratioBackPct: 44,
+        flipCue: '破除「赤身＝必烤レア」迷思！超過 5mm 的赤身若烤レア絕對會「噛み切れない（咬不斷）」，必須烤足 2 分鐘至表面金黃微脆！',
+        timers: [
+          { label: '5~8mm厚切（影片示範）：表68s ➔ 裏52s', stages: [{ name: '厚切赤身表面（表）', sec: 68 }, { name: '厚切赤身裏面（裏）', sec: 52 }] },
+          { label: '2~3mm極薄切：表7s ➔ 裏7s', stages: [{ name: '薄切赤身表面（表）', sec: 7 }, { name: '薄切赤身裏面（裏）', sec: 7 }] }
         ],
-        flipStrategy: "薄切り：正反各 5~8 秒ササッと｜5~8mm厚め：表 60~95 秒、裏 45~80 秒しっかり焼く",
-        flipSignal: "端上桌先看厚度（その場の厚さで判断）！超過 5mm 若烤レア會噛み切れない（咬不斷）",
-        sauce: "タレ（燒肉醬汁）或わさび醤油",
-        goldenRule: "「お店で出る『シンシン・上赤身（ランプ・カメノコ・イチボ・カタサンカク・トウガラシ）』は厚さで判断！ペランペランの薄切りならササッと12秒；5～8mm以上の厚みがあるなら絶対しっかり焼き（否則咬不斷）！」",
-        clipFile: "assets/clips/10_shinshin.mp4",
-        clipCues: [
-          { label: "8mm厚めシンシン下網", sec: 4 },
-          { label: "厚さで判断する法則", sec: 35 },
-          { label: "65s翻面しっかり焼く", sec: 72 }
+        keyframes: [
+          { src: 'assets/images/10_shinshin_1.jpg', caption: 'Step 1：先觀察店家給的シンシン切片厚度' },
+          { src: 'assets/images/10_shinshin_2.jpg', caption: 'Step 2：5~8mm 厚切必須耐心烤足 68 秒才翻面' },
+          { src: 'assets/images/10_shinshin_3.jpg', caption: 'Step 3：烤熟收乾多餘水分，紅肉旨味濃縮且好咬斷' }
         ],
-        stepsPhotos: [
-          { img: "assets/images/10_shinshin_1.jpg", title: "Step 1｜その場の厚さで判断", desc: "示範為約 8mm 的厚めシンシン；不同店家對赤身厚薄方針不同。" },
-          { img: "assets/images/10_shinshin_2.jpg", title: "Step 2｜5~8mm 必烤 60~95秒/面", desc: "5mm～8mm以上の厚さをレアっぽくすると、なかなか噛み切れない！" },
-          { img: "assets/images/10_shinshin_3.jpg", title: "Step 3｜計 2~3 分鐘雙面烤透", desc: "烤到雙面金黃熟透，和牛赤身特有的清爽肉汁與甘甜完全展現。" }
+        steps: [
+          '<strong>第一步先看「その場の厚さ（當下切片厚度）」：</strong>拿到 <code>シンシン</code>、<code>カメノコ</code>、<code>ランプ</code> 等上赤身時，千萬別無腦秒翻！',
+          '<strong>2～3mm ペランペラン薄切り：</strong>透光薄切因為纖維已切斷，可採 <strong>表 5～8 秒 ➔ 裏 5～8 秒</strong> 快烤レア。',
+          '<strong>5～8mm 厚めカット（影片示範）：</strong>超過 5mm 若烤レア會「噛み切れない（咬不斷）」！務必烤足 <strong>表 60～75 秒 ➔ 裏 45～60 秒（約 2 分鐘）</strong>，表面焦脆、內部纖維熟化才美味。'
         ],
-        stepsText: [
-          "<strong>上桌先看「厚さ（厚度）」決定秒數</strong>：燒肉店的「上赤身」每天部位可能不同（シンシン、マルシン、カメノコ、ランプ、カタサンカク、イチボ、トウガラシ等），切法厚薄也依店家方針而異。",
-          "<strong>情況 1：ペランペランの薄切り（2~3mm 極薄切）</strong>——比照「シルクロース」概念，<strong>表 5~8 秒、裏 5~8 秒（總計約 12~15 秒）</strong>ササッと快速涮烤或烤熟皆可（宰さん認為判の大きい薄切り最能展現シンシン的醍醐味）。",
-          "<strong>情況 2：厚みがあるカット（5mm～8mm 以上，如影片示範）</strong>——<strong>表烤 60~75 秒（一般店 90~110 秒）、裏烤 45~60 秒（一般店 70~90 秒）しっかり焼く！</strong>因為赤身油花較少，一旦超過 5～8mm 又烤成レア，一口咬下會「噛み切れない（咬不斷）」。"
-        ],
-        proTip: "「USのお肉はステーキかハンバーグのどっちかしかないけど、スライスでいろんな味の変化を楽しめるのが和牛の素晴らしさ！」"
+        seasoning: '籾ダレ、わさび醤油、ガーリックチップ',
+        drink: '赤ワイン、生ビール'
       },
       {
-        id: "11_sagari",
-        num: "11",
-        category: "akamotsu",
-        chapterName: "第四章：枝肉・薄切り＆サガリ編",
-        shortJp: "サガリ・ハラミ",
-        nameJp: "サガリ・ハラミ",
-        nameZh: "直腸橫膈膜／橫膈膜",
-        aliases: "橫膈膜、牛橫膈膜、サガリ、ハラミ",
-        timeRange: "36:29 - 39:42",
-        ytStart: 2195,
-        ytEnd: 2360,
-        donenessType: "well",
-        donenessLabel: "🔥 しっかり焼き必須（焼き鳥屋の焼き色）",
-        timingStrong: "表 80~90秒 返し ➔ 裏 50~60秒（計 約2~2.5分）",
-        timingNormal: "表 110~130秒(約2分) 返し ➔ 裏 70~90秒（計 約3~3.5分）",
-        timerPresets: [
-          { label: "⏱️ 強火・表 85秒", sec: 85 },
-          { label: "⏱️ 強火・裏 55秒", sec: 55 },
-          { label: "⏱️ 一般店・表 120秒", sec: 120 }
+        num: '11',
+        id: 'cut-11',
+        category: 'horumon',
+        jpName: 'サガリ・ハラミ',
+        zhName: '直腸橫膈膜・橫膈膜（外觀像赤身的內臟系王者）',
+        videoTime: '36:29 - 39:42',
+        ytSec: 2189,
+        clip: 'assets/clips/11_sagari.mp4',
+        strategyBadge: '內臟系必烤熟（表 6 : 裏 4）',
+        badgeType: 'badge-ember',
+        strongTiming: '表 80~90秒 返し ➔ 裏 50~60秒（計 約140秒 / 2~2.5分）',
+        standardTiming: '表 110~130秒 返し ➔ 裏 70~90秒（計 約3~3.5分）',
+        ratioFrontLabel: '表（燒鳥店焦香）60%',
+        ratioBackLabel: '裏（肉汁封鎖）40%',
+        ratioFrontPct: 60,
+        ratioBackPct: 40,
+        flipCue: '雖外觀像赤身紅肉，但解剖學屬於「内臓肉系」！必須烤出如「焼き鳥屋（燒鳥店）」般的金黃焦香烤色與表面冒汗才翻面。',
+        timers: [
+          { label: '強火：表85s ➔ 裏55s', stages: [{ name: '表面焦香（表）', sec: 85 }, { name: '裏面收尾（裏）', sec: 55 }] },
+          { label: '一般店：表120s ➔ 裏80s', stages: [{ name: '表面焦香（表）', sec: 120 }, { name: '裏面收尾（裏）', sec: 80 }] }
         ],
-        flipStrategy: "内臓肉系の原則！表 80~120 秒、裏 50~80 秒至深金黃焦褐色",
-        flipSignal: "第一面耐心烤約 1.5~2 分鐘，出現焼き鳥屋（燒鳥店）般的焦褐色澤再翻面",
-        sauce: "濃厚タレ（燒肉醬汁）或ニンニク醤油",
-        goldenRule: "「サガリ・ハラミは見た目が赤身でも『内臓肉系』！焼き鳥屋でレアで出てくるのはササミと白レバーだけ——サガリとハラミは絶対しっかり焼いて、焼き鳥屋の焼き色を作ろう！」",
-        clipFile: "assets/clips/11_sagari.mp4",
-        clipCues: [
-          { label: "サガリ下網＆内臓原則", sec: 5 },
-          { label: "85s翻面：焼き鳥屋の焼き色", sec: 68 },
-          { label: "裏面55s完熟起鍋", sec: 92 }
+        keyframes: [
+          { src: 'assets/images/11_sagari_1.jpg', caption: 'Step 1：サガリ・ハラミ實為橫膈膜（內臟系）' },
+          { src: 'assets/images/11_sagari_2.jpg', caption: 'Step 2：第一面靜置 85 秒烤出燒鳥店般焦香色澤' },
+          { src: 'assets/images/11_sagari_3.jpg', caption: 'Step 3：翻面再烤 55 秒，外酥香內噴汁' }
         ],
-        stepsPhotos: [
-          { img: "assets/images/11_sagari_1.jpg", title: "Step 1｜サガリ下網烤 80~120秒", desc: "サガリ與ハラミ屬於内臓肉系，千萬別當成薄切里肌只烤十幾秒。" },
-          { img: "assets/images/11_sagari_2.jpg", title: "Step 2｜翻面：焼き鳥屋の焼き色", desc: "第一面烤約 85 秒（一般店約 2 分鐘）出深邃金黃焦褐色，外酥內嫩。" },
-          { img: "assets/images/11_sagari_3.jpg", title: "Step 3｜裏面再烤 50~80秒熟透", desc: "總計約 2~3.5 分鐘徹底加熱，サガリ濃郁肉汁與香氣大爆發。" }
+        steps: [
+          '<strong>認清「內臟肉」本質：</strong><code>サガリ</code> 與 <code>ハラミ</code> 雖看似瘦肉，實為牛的橫膈膜（内臓肉系），烤半生熟會有內臟水感且筋膜難咬。',
+          '<strong>第一面死守 80～90 秒：</strong>放在強火區完全不翻，直到表面冒出肉汁、底部烙出如燒鳥店雞肉串般的深金黃焦香。',
+          '<strong>翻面烤 50～60 秒：</strong>背面烤熟後一口咬下，外層焦香酥脆、內部肉汁飽滿甘甜。'
         ],
-        stepsText: [
-          "<strong>認清身分：サガリ・ハラミ是内臓肉！</strong>許多人看ハラミ／サガリ長得像赤身就只烤二、三十秒吃レア，但它在分類上屬於橫膈膜（内臓肉系），不烤熟甜味出不來。",
-          "<strong>第一面重烤（強火 80~90秒／一般店 110~130秒）</strong>：把烤網當成焼き鳥屋的炭台，耐心將第一面烤約 1.5~2 分鐘，直到呈現深金黃微焦的色澤（焼き鳥屋でよく出てくる焼き色を作りましょう）。",
-          "<strong>第二面烤透（強火 50~60秒／一般店 70~90秒）</strong>：翻面後同樣把裏面烤熟（總計約 2~3.5 分鐘）。唯有熱度徹底穿透中心，橫膈膜標誌性的肉汁與濃郁旨味才會完全釋放。"
-        ],
-        proTip: "宰さん總結全片口訣：「内臓肉系（タン・ツラミ・ハラミ・サガリ・ハツ・テール・ホルモン）は、レバーとハツ以外は全部よく焼きです！」"
+        seasoning: '濃厚醤油ダレ、ニンニク、白飯',
+        drink: '白飯（ライス）、レモンサワー、ビール'
       },
       {
-        id: "12_horumon",
-        num: "12",
-        category: "horumon",
-        chapterName: "第五章：ザ・ホルモン編",
-        shortJp: "ホルモン（小腸・ギャラ・ミノ）",
-        nameJp: "ホルモン（小腸・ギャラ・ミノ）",
-        nameZh: "白內臟三劍客：牛小腸・第四胃・第一胃",
-        aliases: "ホルモン、牛小腸、大腸、牛肚、牛胃、コプチャン、ミノ、ギャラ、赤センマイ、シマチョウ",
-        timeRange: "39:43 - 47:50",
-        ytStart: 2385,
-        ytEnd: 2850,
-        donenessType: "well",
-        donenessLabel: "🔥 業火で完全焼き（ど真ん中・計 5.5~7分）",
-        timingStrong: "皮面を下に 3.5~4分(220~240秒) 放置 ➔ 裏面：小腸 90~100秒 / ミノ 120~150秒 / ギャラ 150~180秒（計 5.5~7分）",
-        timingNormal: "皮面を下に 4~5分(240~300秒) 放置 ➔ 裏面：小腸 2分 / ミノ・ギャラ 2.5~3分（計 6~8分）",
-        timerPresets: [
-          { label: "⏱️ 皮面放置 220秒(3分40秒)", sec: 220 },
-          { label: "⏱️ 小腸・脂面 90秒", sec: 90 },
-          { label: "⏱️ ミノ/ギャラ裏面 150秒", sec: 150 }
+        num: '12',
+        id: 'cut-12',
+        category: 'horumon',
+        jpName: 'ホルモン（小腸・ギャラ・ミノ）',
+        zhName: '白內臟三劍客（牛小腸・第四胃赤センマイ・第一胃）',
+        videoTime: '39:43 - 47:50',
+        ytSec: 2383,
+        clip: 'assets/clips/12_horumon.mp4',
+        strategyBadge: 'O157嚴禁生食・皮面放置 4 分鐘',
+        badgeType: 'badge-danger',
+        strongTiming: '皮面放置 220~240秒（3分40秒~4分）➔ 裏：小腸 90~100秒 / ミノ 120~150秒 / ギャラ 150~180秒（總計 5.5~7分）',
+        standardTiming: '皮面放置 240~300秒（4~5分）➔ 裏：小腸 約2分 / ミノ 2.5~3分 / ギャラ 約3分（總計 6~8分）',
+        ratioFrontLabel: '皮面朝下徹底放置 65%（約4分）',
+        ratioBackLabel: '翻面烤脂面 35%（1.5~3分）',
+        ratioFrontPct: 65,
+        ratioBackPct: 35,
+        flipCue: '整批放進烤網正中央（ど真ん中にドカン），皮面朝下放置近 4 分鐘絕不翻動（影片實測 75 秒翻開完全是生的）！待外緣焦脆、脂香四溢才翻面。',
+        timers: [
+          { label: '小腸：皮面230s ➔ 脂面95s', stages: [{ name: '小腸：皮面放置', sec: 230 }, { name: '小腸：翻面烤脂面', sec: 95 }] },
+          { label: 'ミノ：皮面230s ➔ 裏135s', stages: [{ name: 'ミノ：皮面放置', sec: 230 }, { name: 'ミノ：翻面烤刀紋面', sec: 135 }] },
+          { label: 'ギャラ(No.1)：皮面230s ➔ 脂面165s', stages: [{ name: 'ギャラ：皮面放置', sec: 230 }, { name: 'ギャラ：翻面焦香濃縮', sec: 165 }] }
         ],
-        flipStrategy: "ど真ん中にドカンと乗せる → 皮面先烤 3.5~5 分鐘不翻 → 翻面烤脂面 1.5~3 分鐘",
-        flipSignal: "烤 75 秒翻面完全是生的！必須放滿 3.5~4 分鐘待皮面金黃焦脆才翻面",
-        sauce: "味噌ダレ（濃郁味噌醬）或塩ダレ（鹽味）",
-        goldenRule: "「ホルモンは業火の中で旨くなる！1枚ずつ周りで焼くのはNG、網のど真ん中にドカンと乗せて、脂面じゃない『皮面』を先に 3.5~4 分鐘しっかりほっぱらかす！『あ、焦がしちゃった？』違うんすよ、このぐらいがいいんすよ！」",
-        clipFile: "assets/clips/12_horumon.mp4",
-        clipCues: [
-          { label: "ど真ん中にドカンと下網", sec: 3 },
-          { label: "75s早返しNG実演：全然焼けてない", sec: 30 },
-          { label: "220s(3分40秒)皮面焦香返し", sec: 50 },
-          { label: "小腸・ミノ・ギャラ完熟起鍋", sec: 85 }
+        keyframes: [
+          { src: 'assets/images/12_horumon_1.jpg', caption: 'Step 1：整批霸氣放進烤網正中央（皮面朝下）' },
+          { src: 'assets/images/12_horumon_2.jpg', caption: 'Step 2：徹底放置近 4 分鐘（75秒時底部仍是生的）' },
+          { src: 'assets/images/12_horumon_3.jpg', caption: 'Step 3：翻面後依小腸(95s)/ミノ(135s)/ギャラ(165s)起鍋' }
         ],
-        stepsPhotos: [
-          { img: "assets/images/12_horumon_1.jpg", title: "Step 1｜ど真ん中に一気乗せ・皮面から", desc: "ホルモン需烤 5~7 分鐘，別一片片放邊緣，直接整批放正中央強火區！" },
-          { img: "assets/images/12_horumon_2.jpg", title: "Step 2｜皮面を 3.5~4 分鐘ほっぱらかす", desc: "先烤非脂肪的「皮面」，放滿 220~240 秒直到烤出明顯焦香色澤再翻面。" },
-          { img: "assets/images/12_horumon_3.jpg", title: "Step 3｜裏面 1.5~3 分鐘至微焦酥脆", desc: "「焦がしちゃった？違うんすよ、このぐらいがいいんすよ！」ギャラ＆ミノ焦香無敵。" }
+        steps: [
+          '<strong>O157 絕對食安鐵則：</strong>牛腸與牛胃內部帶有 O157 腸管出血性大腸菌，這與肉品新不新鮮完全無關，<strong>100% 嚴禁半生熟</strong>！',
+          '<strong>ど真ん中にドカン＋皮面放置 4 分鐘：</strong>不要一片片放邊緣！整批放進烤網正中央，<strong>先將「皮面（非脂肪面）」朝下放置 3 分 40 秒～4 分鐘（220～240 秒）完全不翻</strong>。',
+          '<strong>翻面後依部位分秒數起鍋：</strong>翻面烤脂肪面——<code>小腸</code> 烤 <strong>90～100 秒</strong>（保留爆漿甘甜牛油）；<code>ミノ</code> 烤 <strong>2～2.5 分鐘</strong>（刀紋開花酥脆彈牙）；<code>ギャラ（第四胃）</code> 烤 <strong>2.5～3 分鐘</strong> 至微焦濃縮（宰さん最愛 No.1 部位！）。'
         ],
-        stepsText: [
-          "<strong>食安鐵則：生食・しゃぶしゃぶ焼きは絶対ダメ！</strong>有人誤信「鮮度好就能涮一下吃レア」，宰さん嚴正警告：<strong>O157 大腸桿菌與鮮度或品質毫無關係！</strong>不烤熟不會變軟，且有食安風險，務必徹底烤透。",
-          "<strong>下網位置：網のど真ん中にドカンと乗せる（整批放正中央）</strong>：ホルモン動輒要烤 5~7 分鐘，不要一片一片放在烤網外圍弱火區，直接整批放進火候最強的正中央！（註：若店家因排煙ダクト老舊規定不可一次放太多防濃煙，則配合店家規定）。",
-          "<strong>第一面（皮面）秒數：放置 3分40秒～4分鐘（220~240秒）不翻動！</strong>影片中宰さん在 75 秒時故意翻開一片示範，結果完全沒熟（全然焼けてない）。將非脂肪的「皮面」朝下先烤，<strong>徹底放置 3.5~4 分鐘（一般店 4~5 分鐘）</strong>，直到皮面金黃焦脆才翻面。",
-          "<strong>第二面（脂面／裏面）各部位秒數</strong>：<br>・<strong>小腸（コプチャン）</strong>：皮面烤好翻面後，烤脂肪面約 <strong>90~100 秒</strong>（總計約 <strong>5.5 分鐘</strong>，油脂留多少依喜好）。<br>・<strong>ミノ（第一胃）</strong>：翻面後再烤約 <strong>2~2.5 分鐘</strong>至微焦（「焦がしちゃった？」的程度剛剛好，總計約 <strong>6~6.5 分鐘</strong>）。<br>・<strong>ギャラ（第四胃・赤センマイ）</strong>：翻面後再烤約 <strong>2.5~3 分鐘</strong>至邊緣焦脆（總計約 <strong>6.5~7 分鐘</strong>，宰さん大讚：『やっぱ焦げてるのがいいわ、ギャラが一番うめえ！』）。"
-        ],
-        proTip: "宰さん感嘆：「日本の焼肉・ホルモン文化は世界一！只要掌握『ど真ん中強火、皮面放滿 4 分鐘不急著翻、烤出焦香』，在任何燒肉店都能烤出世界第一的ホルモン！」"
+        seasoning: '辛口味噌ダレ、塩ダレ、青唐辛子',
+        drink: '超炭酸ハイボール、レモンサワー、生ビール'
       }
     ];
 
-    function renderAll(filter = "all", query = "") {
-      const q = query.trim().toLowerCase();
-      const filtered = CUTS_DATA.filter(c => {
-        const matchCat =
-          filter === "all" ||
-          c.category === filter ||
-          (filter === "well" && c.donenessType === "well") ||
-          (filter === "dual" && c.donenessType === "dual");
-        const matchQuery =
-          !q ||
-          c.nameJp.toLowerCase().includes(q) ||
-          c.nameZh.toLowerCase().includes(q) ||
-          c.aliases.toLowerCase().includes(q) ||
-          c.goldenRule.toLowerCase().includes(q);
+    // Render Timing Matrix Table
+    function renderTimingTable() {
+      const tbody = document.getElementById('timing-table-body');
+      tbody.innerHTML = CUTS_DATA.map((cut, idx) => {
+        const defaultTimer = cut.timers[0];
+        return `
+          <tr>
+            <td class="tabular-nums" style="font-weight: 700; color: var(--accent-ember);">${cut.num}</td>
+            <td>
+              <a href="#${cut.id}" class="cut-jp-link">
+                <span>${cut.jpName}</span>
+                <span class="material-symbols-outlined icon-sm" aria-hidden="true">arrow_outward</span>
+              </a>
+              <span class="cut-zh-sub">${cut.zhName}</span>
+            </td>
+            <td>
+              <span class="spec-badge ${cut.badgeType}">${cut.strategyBadge}</span>
+            </td>
+            <td class="col-strong col-highlight tabular-nums">${cut.strongTiming}</td>
+            <td class="col-standard tabular-nums">${cut.standardTiming}</td>
+            <td>${cut.flipCue}</td>
+            <td>
+              <button type="button" class="table-timer-btn" onclick="startMultiStageTimer(${idx}, 0)">
+                <span class="material-symbols-outlined icon-sm" aria-hidden="true">timer</span>
+                <span>計時</span>
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    // Render 12 Cuts Specification Cards
+    function renderCutCards(filterCat = 'all', searchQuery = '') {
+      const container = document.getElementById('cuts-stack');
+      const q = searchQuery.trim().toLowerCase();
+
+      const filtered = CUTS_DATA.filter(cut => {
+        const matchCat = filterCat === 'all' || cut.category === filterCat;
+        const matchQuery = !q ||
+          cut.jpName.toLowerCase().includes(q) ||
+          cut.zhName.toLowerCase().includes(q) ||
+          cut.flipCue.toLowerCase().includes(q) ||
+          cut.strategyBadge.toLowerCase().includes(q);
         return matchCat && matchQuery;
       });
 
-      const jumpBar = document.getElementById("quick-jump-bar");
-      jumpBar.innerHTML = filtered.map(c => `
-        <a href="#cut-${c.id}" class="jump-chip">
-          <span class="jump-num">#${c.num}</span>
-          <span>${c.shortJp}</span>
-          <span style="font-size:0.75rem;color:var(--text-muted);font-weight:400;">(${c.nameZh.split('（')[0]})</span>
-        </a>
-      `).join("");
-
-      const container = document.getElementById("cuts-container");
       if (filtered.length === 0) {
-        container.innerHTML = `<div style="text-align:center;padding:3rem;color:var(--text-secondary);">找不到符合「${query}」的部位，請嘗試其他關鍵字。</div>`;
+        container.innerHTML = `
+          <div class="decision-console" style="text-align: center; padding: 40px 24px;">
+            <span class="material-symbols-outlined icon-xl" style="color: var(--accent-amber); margin-bottom: 8px;" aria-hidden="true">search_off</span>
+            <h3 style="font-size: 1.2rem; margin-bottom: 6px;">找不到符合「${searchQuery}」的部位</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 16px;">請嘗試搜尋日文原名（如：タン、ハツ、シルクロース、ホルモン）或切換上方分類標籤。</p>
+            <button type="button" class="btn-secondary" onclick="resetFilters()">
+              <span class="material-symbols-outlined icon-sm" aria-hidden="true">refresh</span>
+              <span>顯示全部 12 個部位</span>
+            </button>
+          </div>
+        `;
         return;
       }
 
-      container.innerHTML = filtered.map(c => `
-        <article class="cut-card" id="cut-${c.id}">
-          <div class="cut-header">
-            <div class="cut-title-group">
-              <div class="cut-meta-row">
-                <span class="cut-index">PART ${c.num}</span>
-                <span class="cut-chapter">${c.chapterName}</span>
-                <span class="cut-timestamp">⏱️ 原片 ${c.timeRange}</span>
-              </div>
-              <h3 class="cut-title">
-                ${c.nameJp}
-                <span class="cut-zh-sub">｜${c.nameZh}</span>
-              </h3>
-            </div>
-            <div class="cut-badges">
-              <span class="badge-doneness ${c.donenessType === 'well' ? 'doneness-well' : 'doneness-dual'}">
-                ${c.donenessLabel}
-              </span>
-            </div>
-          </div>
+      container.innerHTML = filtered.map(cut => {
+        const cutIndex = CUTS_DATA.findIndex(c => c.id === cut.id);
+        const timerButtonsHtml = cut.timers.map((t, tIdx) => `
+          <button type="button" class="start-timer-btn ${tIdx > 0 ? 'secondary-timer' : ''}" onclick="startMultiStageTimer(${cutIndex}, ${tIdx})">
+            <span class="material-symbols-outlined icon-sm icon-filled" aria-hidden="true">timer</span>
+            <span>${t.label}</span>
+          </button>
+        `).join('');
 
-          <div class="cut-rule-banner">
-            <span>💬 職人鐵則：${c.goldenRule}</span>
-          </div>
+        const keyframesHtml = cut.keyframes.map(kf => `
+          <button type="button" class="keyframe-btn" onclick="openLightbox('${kf.src}', '${cut.num} ${cut.jpName} — ${kf.caption}')">
+            <img src="${kf.src}" alt="${cut.jpName} ${kf.caption}" width="640" height="360" loading="lazy">
+            <div class="keyframe-caption">
+              <span class="material-symbols-outlined icon-sm" style="color: var(--accent-amber);" aria-hidden="true">zoom_in</span>
+              <span>${kf.caption}</span>
+            </div>
+          </button>
+        `).join('');
 
-          <div class="cut-body">
-            <div class="media-col">
-              <div class="video-mode-tabs">
-                <div class="tab-group">
-                  <button class="mode-btn active" id="btn-clip-${c.id}" onclick="switchVideoMode('${c.id}', 'clip', ${c.ytStart}, ${c.ytEnd})">
-                    🎬 擷取精華實烤短片
-                  </button>
-                  <button class="mode-btn" id="btn-yt-${c.id}" onclick="switchVideoMode('${c.id}', 'yt', ${c.ytStart}, ${c.ytEnd})">
-                    ▶️ YouTube 原片完整段落
-                  </button>
+        const stepsHtml = cut.steps.map((stepText, sIdx) => `
+          <li class="step-item">
+            <span class="step-num">${sIdx + 1}</span>
+            <div>${stepText}</div>
+          </li>
+        `).join('');
+
+        return `
+          <article id="${cut.id}" class="cut-spec-card">
+            <header class="cut-spec-header">
+              <div>
+                <div class="cut-title-row">
+                  <span class="cut-index">${cut.num}</span>
+                  <h3 class="cut-jp-name">${cut.jpName}</h3>
                 </div>
-                <a href="https://www.youtube.com/watch?v=${YOUTUBE_ID}&t=${c.ytStart}s" target="_blank" rel="noopener" style="font-size:0.8rem;color:var(--gold-amber);text-decoration:none;">
-                  ↗ 在 YouTube 開啟 (${c.timeRange.split(' ')[0]})
-                </a>
+                <p class="cut-zh-name">${cut.zhName}</p>
+              </div>
+              <div class="cut-badges">
+                <span class="spec-badge ${cut.badgeType}">
+                  <span class="material-symbols-outlined icon-sm" aria-hidden="true">flip</span>
+                  <span>${cut.strategyBadge}</span>
+                </span>
+                <span class="spec-badge tabular-nums">
+                  <span class="material-symbols-outlined icon-sm" aria-hidden="true">schedule</span>
+                  <span>${cut.videoTime}</span>
+                </span>
+              </div>
+            </header>
+
+            <div class="cut-spec-body">
+              <!-- Media Column -->
+              <div class="cut-media-col">
+                <div class="video-stage">
+                  <video controls preload="metadata" playsinline poster="${cut.keyframes[0].src}">
+                    <source src="${cut.clip}" type="video/mp4">
+                    您的瀏覽器不支援 HTML5 影片播放。
+                  </video>
+                  <div class="video-stage-bar">
+                    <span>
+                      <span class="material-symbols-outlined icon-sm" style="vertical-align: -3px; color: var(--accent-ember);" aria-hidden="true">play_circle</span>
+                      原片實演教學片段（${cut.videoTime}）
+                    </span>
+                    <a href="https://www.youtube.com/watch?v=oKJlJIg0OsI&t=${cut.ytSec}s" target="_blank" rel="noopener noreferrer" class="yt-source-link">
+                      <span>YouTube ${cut.videoTime.split(' ')[0]}</span>
+                      <span class="material-symbols-outlined icon-sm" aria-hidden="true">open_in_new</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="keyframe-strip" aria-label="${cut.jpName} 翻面分解步驟圖">
+                  ${keyframesHtml}
+                </div>
               </div>
 
-              <div class="video-box" id="video-box-${c.id}">
-                <video id="video-${c.id}" controls preload="metadata" poster="${c.stepsPhotos[2].img}">
-                  <source src="${c.clipFile}" type="video/mp4" />
-                  您的瀏覽器不支援 HTML5 影片播放。
-                </video>
-              </div>
+              <!-- Details & Timing Column -->
+              <div class="cut-details-col">
+                <div class="timing-box">
+                  <div class="timing-box-header">
+                    <span class="timing-box-title">
+                      <span class="material-symbols-outlined icon-sm icon-filled" aria-hidden="true">local_fire_department</span>
+                      <span>多久翻面＆總秒數（點擊下方按鈕啟動讀秒）</span>
+                    </span>
+                  </div>
 
-              <div class="clip-cue-bar" id="cue-bar-${c.id}">
-                <span class="cue-label">⚡ 影片動作跳轉：</span>
-                ${c.clipCues.map(cue => `
-                  <button class="cue-btn" onclick="seekClip('${c.id}', ${cue.sec})">
-                    ${formatSec(cue.sec)} ${cue.label}
-                  </button>
-                `).join("")}
-              </div>
-
-              <div class="steps-photo-grid">
-                ${c.stepsPhotos.map(p => `
-                  <div class="step-photo-card" onclick="openLightbox('${p.img}', '${c.nameJp} — ${p.title}：${p.desc}')">
-                    <img src="${p.img}" alt="${p.title}" loading="lazy" />
-                    <div class="step-photo-caption">
-                      <strong>${p.title}</strong>
-                      ${p.desc}
+                  <div class="timing-modes-grid">
+                    <div class="timing-mode-card mode-strong">
+                      <div class="mode-label">
+                        <span class="material-symbols-outlined icon-sm" style="color: var(--accent-ember);" aria-hidden="true">whatshot</span>
+                        <span>強火（プロガス火基準）</span>
+                      </div>
+                      <div class="mode-seconds tabular-nums">${cut.strongTiming}</div>
+                    </div>
+                    <div class="timing-mode-card mode-standard">
+                      <div class="mode-label">
+                        <span class="material-symbols-outlined icon-sm" style="color: var(--accent-amber);" aria-hidden="true">outdoor_grill</span>
+                        <span>一般店（普通炭火・無煙基準）</span>
+                      </div>
+                      <div class="mode-seconds tabular-nums">${cut.standardTiming}</div>
                     </div>
                   </div>
-                `).join("")}
-              </div>
-            </div>
 
-            <div class="guide-col">
-              <div class="info-grid">
-                <div class="info-item" style="grid-column: span 2; border-color: rgba(242,100,34,0.45); background: rgba(242,100,34,0.08);">
-                  <span class="info-label" style="color:#ff9f43;">⏱️ 焼き時間・翻面秒數（強火實測 vs 一般燒肉店）</span>
-                  <div class="info-value" style="margin-bottom:0.25rem;">🔥 <strong>強火炭爐（ホドリ實測）</strong>：${c.timingStrong}</div>
-                  <div class="info-value" style="color:var(--text-secondary);font-weight:500;font-size:0.86rem;">🏠 <strong>一般燒肉店（標準火力）</strong>：${c.timingNormal}</div>
-                  <div style="margin-top:0.55rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
-                    ${c.timerPresets.map(tp => `
-                      <button class="cue-btn" onclick="startQuickTimer(${tp.sec})" style="background:rgba(245,176,65,0.18);border-color:rgba(245,176,65,0.45);color:var(--gold-amber);">
-                        ${tp.label}（點此倒數）
-                      </button>
-                    `).join("")}
+                  <div class="ratio-bar-wrap">
+                    <div class="ratio-bar-labels">
+                      <span>${cut.ratioFrontLabel}</span>
+                      <span>${cut.ratioBackLabel}</span>
+                    </div>
+                    <div class="ratio-bar-track" aria-hidden="true">
+                      <div class="ratio-seg-front" style="width: ${cut.ratioFrontPct}%;"></div>
+                      <div class="ratio-seg-back" style="width: ${cut.ratioBackPct}%;"></div>
+                    </div>
+                  </div>
+
+                  <div class="timer-action-row">
+                    ${timerButtonsHtml}
                   </div>
                 </div>
-                <div class="info-item">
-                  <span class="info-label">返し方＆表裏比率</span>
-                  <div class="info-value">${c.flipStrategy}</div>
-                </div>
-                <div class="info-item">
-                  <span class="info-label">返し時（翻面視覺訊號）</span>
-                  <div class="info-value">${c.flipSignal}</div>
-                </div>
-                <div class="info-item" style="grid-column: span 2;">
-                  <span class="info-label">おすすめの食べ方・タレ</span>
-                  <div class="info-value">🥢 ${c.sauce}</div>
-                </div>
-              </div>
 
-              <div class="guide-box">
-                <h4>🔥 焼き方ステップ解説（Step-by-Step）</h4>
-                <ol class="step-list">
-                  ${c.stepsText.map((st, idx) => `
-                    <li>
-                      <span class="step-num-badge">${idx + 1}</span>
-                      ${st}
-                    </li>
-                  `).join("")}
+                <div class="flip-cue-box">
+                  <div class="flip-cue-title">
+                    <span class="material-symbols-outlined icon-sm" aria-hidden="true">visibility</span>
+                    <span>返し時（翻面／起鍋視覺訊號）</span>
+                  </div>
+                  <p class="flip-cue-text">${cut.flipCue}</p>
+                </div>
+
+                <ol class="steps-list">
+                  ${stepsHtml}
                 </ol>
-              </div>
 
-              <div class="pro-tip-box">
-                <strong>💡 職人のポイント：</strong>${c.proTip}
+                <div class="pairing-footer">
+                  <span class="pairing-item">
+                    <span class="material-symbols-outlined icon-sm" style="color: var(--accent-amber);" aria-hidden="true">restaurant_menu</span>
+                    <span><strong>推薦沾醬：</strong>${cut.seasoning}</span>
+                  </span>
+                  <span class="pairing-item">
+                    <span class="material-symbols-outlined icon-sm" style="color: var(--accent-amber);" aria-hidden="true">sports_bar</span>
+                    <span><strong>最佳搭配：</strong>${cut.drink}</span>
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-        </article>
-      `).join("");
+          </article>
+        `;
+      }).join('');
     }
 
-    function renderSummaryTable() {
-      const tbody = document.getElementById("summary-tbody");
-      tbody.innerHTML = CUTS_DATA.map(c => `
-        <tr>
-          <td style="font-family:'JetBrains Mono',monospace;color:var(--gold-amber);font-weight:700;">#${c.num}</td>
-          <td>
-            <a href="#cut-${c.id}" style="color:#fff;font-weight:800;font-size:0.96rem;text-decoration:none;">${c.nameJp}</a>
-            <div style="font-size:0.8rem;color:var(--gold-amber);margin-top:0.1rem;">${c.nameZh}</div>
-          </td>
-          <td>
-            <span class="badge-doneness ${c.donenessType === 'well' ? 'doneness-well' : 'doneness-dual'}" style="font-size:0.78rem;padding:0.25rem 0.6rem;">
-              ${c.donenessLabel}
-            </span>
-          </td>
-          <td>
-            <div style="color:#ff9f43;font-weight:700;font-size:0.85rem;">🔥 強火：${c.timingStrong}</div>
-            <div style="color:var(--text-secondary);font-size:0.8rem;margin-top:0.15rem;">🏠 一般店：${c.timingNormal}</div>
-          </td>
-          <td>${c.flipStrategy}</td>
-          <td>${c.flipSignal}</td>
-          <td>${c.sauce}</td>
-        </tr>
-      `).join("");
+    // Interactive 3-Second Decision Selector
+    function selectDecision(key) {
+      const data = DECISION_DATA[key];
+      if (!data) return;
+
+      document.querySelectorAll('.decision-tab-btn').forEach(btn => {
+        btn.setAttribute('aria-selected', btn.dataset.decision === key ? 'true' : 'false');
+      });
+
+      document.getElementById('decision-title').textContent = data.title;
+      document.getElementById('decision-desc').textContent = data.desc;
+      document.getElementById('decision-links').innerHTML = data.links.map(l => `
+        <a href="${l.href}" class="cut-jump-link">
+          <span class="cut-jump-num">${l.num}</span>
+          <span>${l.name}</span>
+        </a>
+      `).join('');
     }
 
-    function formatSec(sec) {
+    // Global Fire Mode Switcher
+    function setFireMode(mode) {
+      document.body.setAttribute('data-fire-mode', mode);
+      document.querySelectorAll('.fire-mode-btn').forEach(btn => {
+        btn.setAttribute('aria-pressed', btn.dataset.mode === mode ? 'true' : 'false');
+      });
+    }
+
+    // Category Filter & Search
+    let currentFilter = 'all';
+    function filterCuts(cat) {
+      currentFilter = cat;
+      document.querySelectorAll('.filter-chip').forEach(btn => {
+        btn.setAttribute('aria-pressed', btn.dataset.filter === cat ? 'true' : 'false');
+      });
+      const q = document.getElementById('cut-search-input').value;
+      renderCutCards(currentFilter, q);
+    }
+
+    function handleSearchInput(val) {
+      renderCutCards(currentFilter, val);
+    }
+
+    function resetFilters() {
+      document.getElementById('cut-search-input').value = '';
+      filterCuts('all');
+    }
+
+    // Multi-Stage Audio & Visual Grill Timer
+    let timerInterval = null;
+    let activeStages = [];
+    let currentStageIdx = 0;
+    let remainingSec = 0;
+    let stageTotalSec = 1;
+    let isPaused = false;
+
+    function playTimerBeep(freq = 880, count = 2) {
+      try {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        const ctx = new AudioCtx();
+        for (let i = 0; i < count; i++) {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.value = freq;
+          gain.gain.setValueAtTime(0.18, ctx.currentTime + i * 0.18);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + i * 0.18 + 0.14);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(ctx.currentTime + i * 0.18);
+          osc.stop(ctx.currentTime + i * 0.18 + 0.15);
+        }
+      } catch (_) {}
+    }
+
+    function formatMMSS(sec) {
       const m = Math.floor(sec / 60);
       const s = sec % 60;
-      return `${m}:${s < 10 ? '0' + s : s}`;
+      return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
     }
 
-    function seekClip(id, sec) {
-      let vid = document.getElementById(`video-${id}`);
-      if (!vid) {
-        const cut = CUTS_DATA.find(x => x.id === id);
-        switchVideoMode(id, 'clip', cut.ytStart, cut.ytEnd);
-        vid = document.getElementById(`video-${id}`);
-      }
-      if (vid) {
-        vid.currentTime = sec;
-        vid.play();
-      }
+    function updateTimerUI() {
+      const stage = activeStages[currentStageIdx];
+      if (!stage) return;
+      document.getElementById('timer-countdown').textContent = formatMMSS(remainingSec);
+      document.getElementById('timer-stage-pill').textContent =
+        `STAGE ${currentStageIdx + 1}/${activeStages.length}：${stage.name}`;
+      const ratio = Math.max(0, Math.min(1, remainingSec / stageTotalSec));
+      document.getElementById('timer-progress-fill').style.transform = `scaleX(${ratio})`;
     }
 
-    function switchVideoMode(id, mode, ytStart, ytEnd) {
-      const box = document.getElementById(`video-box-${id}`);
-      const btnClip = document.getElementById(`btn-clip-${id}`);
-      const btnYt = document.getElementById(`btn-yt-${id}`);
-      const cueBar = document.getElementById(`cue-bar-${id}`);
-      const cut = CUTS_DATA.find(x => x.id === id);
-
-      if (mode === "clip") {
-        btnClip.classList.add("active");
-        btnYt.classList.remove("active");
-        cueBar.style.display = "flex";
-        box.innerHTML = `
-          <video id="video-${id}" controls preload="metadata" poster="${cut.stepsPhotos[2].img}">
-            <source src="${cut.clipFile}" type="video/mp4" />
-          </video>
-        `;
-      } else {
-        btnYt.classList.add("active");
-        btnClip.classList.remove("active");
-        cueBar.style.display = "none";
-        box.innerHTML = `
-          <iframe
-            src="https://www.youtube.com/embed/${YOUTUBE_ID}?start=${ytStart}&end=${ytEnd}&autoplay=1&rel=0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        `;
-      }
+    function loadStage(idx) {
+      currentStageIdx = idx;
+      const stage = activeStages[currentStageIdx];
+      stageTotalSec = stage.sec;
+      remainingSec = stage.sec;
+      updateTimerUI();
     }
 
-    function openLightbox(src, caption) {
-      document.getElementById("lightbox-img").src = src;
-      document.getElementById("lightbox-caption").textContent = caption;
-      document.getElementById("lightbox").classList.add("open");
-    }
+    function startMultiStageTimer(cutIdx, timerIdx) {
+      const cut = CUTS_DATA[cutIdx];
+      const preset = cut.timers[timerIdx] || cut.timers[0];
+      activeStages = preset.stages;
+      isPaused = false;
+      document.getElementById('timer-pause-icon').textContent = 'pause';
+      document.getElementById('timer-pause-text').textContent = '暫停';
+      document.getElementById('timer-cut-label').textContent = `${cut.num} ${cut.jpName.split('（')[0]}｜${preset.label}`;
+      document.getElementById('timer-dock').classList.add('is-active');
 
-    function closeLightbox() {
-      document.getElementById("lightbox").classList.remove("open");
-    }
+      if (timerInterval) clearInterval(timerInterval);
+      loadStage(0);
+      playTimerBeep(660, 1);
 
-    let timerInterval = null;
-    let remainingSec = 5;
-
-    function updateTimerDisplay(sec) {
-      const el = document.getElementById("timer-display");
-      const m = String(Math.floor(sec / 60)).padStart(2, "0");
-      const s = String(sec % 60).padStart(2, "0");
-      el.textContent = `${m}:${s}`;
-    }
-
-    function startQuickTimer(seconds) {
-      clearInterval(timerInterval);
-      remainingSec = seconds;
-      updateTimerDisplay(remainingSec);
-      const el = document.getElementById("timer-display");
-      el.style.color = "#ff6b6b";
       timerInterval = setInterval(() => {
-        remainingSec--;
-        if (remainingSec <= 0) {
-          clearInterval(timerInterval);
-          el.textContent = "返し時!";
-          el.style.color = "#2ecc71";
-          try {
-            const ctx = new (window.AudioContext || window.webkitAudioContext)();
-            const osc = ctx.createOscillator();
-            osc.type = "sine";
-            osc.frequency.setValueAtTime(880, ctx.currentTime);
-            osc.connect(ctx.destination);
-            osc.start();
-            osc.stop(ctx.currentTime + 0.35);
-          } catch (e) {}
+        if (isPaused) return;
+        if (remainingSec > 0) {
+          remainingSec--;
+          updateTimerUI();
         } else {
-          updateTimerDisplay(remainingSec);
+          if (currentStageIdx < activeStages.length - 1) {
+            playTimerBeep(980, 2);
+            loadStage(currentStageIdx + 1);
+          } else {
+            playTimerBeep(1200, 3);
+            clearInterval(timerInterval);
+            timerInterval = null;
+            document.getElementById('timer-stage-pill').textContent = '火入れ完了！請立即起鍋享用';
+          }
         }
       }, 1000);
     }
 
-    function resetQuickTimer() {
-      clearInterval(timerInterval);
-      const el = document.getElementById("timer-display");
-      el.style.color = "var(--gold-amber)";
-      updateTimerDisplay(5);
+    function togglePauseTimer() {
+      isPaused = !isPaused;
+      document.getElementById('timer-pause-icon').textContent = isPaused ? 'play_arrow' : 'pause';
+      document.getElementById('timer-pause-text').textContent = isPaused ? '繼續' : '暫停';
     }
 
-    let currentFilter = "all";
-    document.getElementById("category-pills").addEventListener("click", e => {
-      const btn = e.target.closest(".pill");
-      if (!btn) return;
-      document.querySelectorAll("#category-pills .pill").forEach(p => p.classList.remove("active"));
-      btn.classList.add("active");
-      currentFilter = btn.dataset.filter;
-      renderAll(currentFilter, document.getElementById("search-input").value);
+    function nextTimerStage() {
+      if (!activeStages.length) return;
+      if (currentStageIdx < activeStages.length - 1) {
+        loadStage(currentStageIdx + 1);
+      } else {
+        remainingSec = 0;
+        updateTimerUI();
+      }
+    }
+
+    function restartGrillTimer() {
+      if (!activeStages.length) return;
+      isPaused = false;
+      document.getElementById('timer-pause-icon').textContent = 'pause';
+      document.getElementById('timer-pause-text').textContent = '暫停';
+      loadStage(0);
+    }
+
+    function stopGrillTimer() {
+      if (timerInterval) clearInterval(timerInterval);
+      timerInterval = null;
+      document.getElementById('timer-dock').classList.remove('is-active');
+    }
+
+    // Lightbox Functions
+    function openLightbox(src, caption) {
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      img.src = src;
+      img.alt = caption;
+      document.getElementById('lightbox-caption').textContent = caption;
+      lb.classList.add('is-open');
+    }
+
+    function closeLightbox(e) {
+      if (e && e.target !== document.getElementById('lightbox')) return;
+      document.getElementById('lightbox').classList.remove('is-open');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.getElementById('lightbox').classList.remove('is-open');
+      }
     });
 
-    document.getElementById("search-input").addEventListener("input", e => {
-      renderAll(currentFilter, e.target.value);
-    });
-
-    renderAll();
-    renderSummaryTable();
+    // Initialize Page
+    renderTimingTable();
+    renderCutCards();
   </script>
 </body>
 </html>
